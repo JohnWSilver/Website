@@ -8,27 +8,23 @@
       INTEGRATION NOTE (do not skip — a pagetwo.html already exists)
 
       The live repo https://github.com/JohnWSilver/Website already has a
-      pagetwo.html: a short "Welcome to page two of the portfolio" card in
-      this same dark slate / sky-blue style, linked from the Home nav as
-      "Howdy". This file is a *proposed* replacement that keeps that look
-      (CSS variables, typography, nav, footer) and turns the page into the
-      paper-trading status view.
+      pagetwo.html. This file is a *proposed* replacement that keeps the
+      site's look (dark #0f172a, accent #38bdf8, Segoe UI, nav, footer)
+      and adds the paper-trading status view plus equity / daily P&L charts.
 
-      This starter project does NOT push this file to the website repo.
-      status_publisher.py only updates status.json (same folder as this page).
+      This starter project does NOT push this HTML file. status_publisher.py
+      only updates status.json and history.json in the same folder.
 
-      To integrate, pick one:
-        A) Replace the existing pagetwo.html with this file (after review).
-        B) Keep the current welcome card and paste everything between
-           the "STATUS SECTION" comments below into the existing page,
-           plus the page-specific CSS and the <script> at the bottom.
+      status.json  — latest snapshot (KPIs, open positions)
+      history.json — equity series, daily summary, full trade list
 
-      status.json is fetched from the same directory (./status.json).
-      GitHub Pages is not enabled on the repo as of 2026-11-12; enable
-      Pages from the main branch, site root, so this page and status.json
-      are served together (expected URL:
-      https://johnwsilver.github.io/Website/pagetwo.html).
+      After enabling GitHub Pages from main / root, expected URL:
+      https://johnwsilver.github.io/Website/pagetwo.html
+
+      Chart.js is pinned to 4.6.1 on jsDelivr (verified 2026-11-12):
+      https://cdn.jsdelivr.net/npm/chart.js@4.6.1/dist/chart.umd.min.js
     -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.6.1/dist/chart.umd.min.js"></script>
     <style>
         :root {
             --bg-color: #0f172a;
@@ -157,16 +153,6 @@
             color: #0f172a;
         }
 
-        .badge-open {
-            background: var(--up);
-            color: #0f172a;
-        }
-
-        .badge-closed {
-            background: var(--border);
-            color: var(--text-color);
-        }
-
         .up { color: var(--up); }
         .down { color: var(--down); }
 
@@ -202,13 +188,73 @@
             margin: 8px 0 24px;
         }
 
-        .error {
+        .error, .empty-state {
             background: var(--secondary-bg);
-            border: 1px solid var(--down);
-            color: var(--text-color);
-            padding: 20px 24px;
+            border: 1px solid var(--border);
+            color: var(--muted);
+            padding: 24px;
             border-radius: 10px;
-            margin: 20px 0 40px;
+            margin: 0 0 40px;
+        }
+
+        .error {
+            border-color: var(--down);
+            color: var(--text-color);
+        }
+
+        .chart-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin: 0 0 16px;
+        }
+
+        .range-toggle {
+            display: flex;
+            gap: 8px;
+        }
+
+        .range-toggle button {
+            background: var(--secondary-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            padding: 8px 14px;
+            font-weight: bold;
+            font-family: inherit;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+        }
+
+        .range-toggle button:hover {
+            border-color: var(--accent-color);
+        }
+
+        .range-toggle button[aria-pressed="true"] {
+            background: var(--accent-color);
+            color: #0f172a;
+            border-color: var(--accent-color);
+        }
+
+        .chart-card {
+            background: var(--secondary-bg);
+            padding: 24px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            margin-bottom: 28px;
+        }
+
+        .chart-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+
+        .chart-wrap {
+            position: relative;
+            height: 280px;
         }
 
         .disclaimer {
@@ -228,6 +274,7 @@
             h1 { font-size: 2.2rem; }
             main { padding-top: 100px; }
             nav { gap: 16px; font-size: 0.9rem; }
+            .chart-wrap { height: 220px; }
         }
     </style>
 </head>
@@ -249,7 +296,7 @@
             no live orders, and nothing here is financial advice.
         </p>
 
-        <!-- ===== STATUS SECTION (paste this block into an existing pagetwo.html if you are not replacing the whole file) ===== -->
+        <!-- ===== STATUS SECTION ===== -->
         <p class="status-meta" id="status-meta">Loading status.json…</p>
         <div id="status-error" hidden class="error"></div>
 
@@ -273,6 +320,34 @@
                     <tbody id="positions-body"></tbody>
                 </table>
             </div>
+        </div>
+        <!-- ===== END STATUS SECTION ===== -->
+
+        <!-- ===== HISTORY SECTION ===== -->
+        <div class="chart-toolbar">
+            <h2 style="margin-bottom: 0;">History</h2>
+            <div class="range-toggle" role="group" aria-label="Chart range">
+                <button type="button" data-range="1D">1D</button>
+                <button type="button" data-range="1W">1W</button>
+                <button type="button" data-range="1M">1M</button>
+                <button type="button" data-range="All" aria-pressed="true">All</button>
+            </div>
+        </div>
+        <p class="status-meta" id="history-meta">Loading history.json…</p>
+        <div id="history-empty" hidden class="empty-state"></div>
+        <div id="history-root" hidden>
+            <div class="chart-card">
+                <h3>Equity over time</h3>
+                <div class="chart-wrap">
+                    <canvas id="equity-chart" aria-label="Equity over time"></canvas>
+                </div>
+            </div>
+            <div class="chart-card">
+                <h3>Daily P&amp;L</h3>
+                <div class="chart-wrap">
+                    <canvas id="pnl-chart" aria-label="Daily paper P and L"></canvas>
+                </div>
+            </div>
 
             <h2>Recent paper trades</h2>
             <div class="table-wrap">
@@ -292,12 +367,13 @@
                 </table>
             </div>
         </div>
-        <!-- ===== END STATUS SECTION ===== -->
+        <!-- ===== END HISTORY SECTION ===== -->
 
         <p class="disclaimer">
             Paper and backtest results do not guarantee real returns. The agent’s
             example strategy is a placeholder, not a recommendation. This page
-            reads <code>status.json</code> from the same folder and refreshes about once a minute.
+            reads <code>status.json</code> and <code>history.json</code> from the
+            same folder and refreshes about once a minute.
         </p>
     </main>
 
@@ -308,7 +384,19 @@
     <script>
     (function () {
         const STATUS_URL = "status.json";
+        const HISTORY_URL = "history.json";
         const TZ = "America/Los_Angeles";
+        const RANGE_MS = { "1D": 24 * 60 * 60 * 1000, "1W": 7 * 24 * 60 * 60 * 1000, "1M": 30 * 24 * 60 * 60 * 1000 };
+        const tickColor = "#94a3b8";
+        const gridColor = "rgba(51, 65, 85, 0.9)";
+        const accent = "#38bdf8";
+        const up = "#34d399";
+        const down = "#fb7185";
+
+        let historyData = null;
+        let currentRange = "All";
+        let equityChart = null;
+        let pnlChart = null;
 
         const money = (value) => {
             if (value === null || value === undefined || value === "") return "—";
@@ -330,15 +418,27 @@
             return n > 0 ? "up" : "down";
         };
 
-        const when = (value) => {
+        const when = (value, opts) => {
             if (!value) return "—";
             const d = new Date(value);
             if (Number.isNaN(d.getTime())) return String(value);
-            return new Intl.DateTimeFormat("en-US", {
+            return new Intl.DateTimeFormat("en-US", Object.assign({
                 timeZone: TZ,
                 dateStyle: "medium",
                 timeStyle: "short"
-            }).format(d) + " PT";
+            }, opts || {})).format(d) + (opts && opts.omitZone ? "" : " PT");
+        };
+
+        const chartLabel = (value, range) => {
+            const d = new Date(value);
+            if (Number.isNaN(d.getTime())) return String(value);
+            if (range === "1D") {
+                return new Intl.DateTimeFormat("en-US", { timeZone: TZ, hour: "numeric", minute: "2-digit" }).format(d);
+            }
+            if (range === "1W") {
+                return new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "short", hour: "numeric" }).format(d);
+            }
+            return new Intl.DateTimeFormat("en-US", { timeZone: TZ, month: "short", day: "numeric" }).format(d);
         };
 
         const showError = (message) => {
@@ -362,7 +462,191 @@
             rows.forEach((row) => tbody.appendChild(row));
         };
 
-        const render = (data) => {
+        const inRange = (iso, range, endMs) => {
+            if (range === "All" || !RANGE_MS[range]) return true;
+            const ms = new Date(iso).getTime();
+            if (Number.isNaN(ms)) return false;
+            return ms >= (endMs - RANGE_MS[range]);
+        };
+
+        const axisDefaults = {
+            ticks: { color: tickColor, maxRotation: 0, autoSkip: true, maxTicksLimit: 8 },
+            grid: { color: gridColor },
+            border: { color: "#334155" }
+        };
+
+        const renderEquityChart = (points, range) => {
+            const ctx = document.getElementById("equity-chart").getContext("2d");
+            const labels = points.map((p) => chartLabel(p.t, range));
+            const data = points.map((p) => Number(p.equity));
+            const config = {
+                type: "line",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: "Equity",
+                        data: data,
+                        borderColor: accent,
+                        backgroundColor: "rgba(56, 189, 248, 0.15)",
+                        fill: true,
+                        tension: 0.25,
+                        pointRadius: points.length > 60 ? 0 : 3,
+                        pointHoverRadius: 5,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    animation: false,
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                title: (items) => {
+                                    const i = items[0] && items[0].dataIndex;
+                                    return points[i] ? when(points[i].t) : "";
+                                },
+                                label: (item) => "Equity: " + money(item.parsed.y)
+                            }
+                        }
+                    },
+                    scales: {
+                        x: axisDefaults,
+                        y: Object.assign({}, axisDefaults, {
+                            ticks: Object.assign({}, axisDefaults.ticks, {
+                                callback: (value) => money(value)
+                            })
+                        })
+                    }
+                }
+            };
+            if (equityChart) {
+                equityChart.data = config.data;
+                equityChart.options = config.options;
+                equityChart.update();
+            } else {
+                equityChart = new Chart(ctx, config);
+            }
+        };
+
+        const renderPnlChart = (days, range) => {
+            const ctx = document.getElementById("pnl-chart").getContext("2d");
+            const labels = days.map((d) => chartLabel(d.snapshot_at || d.date, range === "1D" ? "1W" : range));
+            const data = days.map((d) => Number(d.day_pnl));
+            const colors = data.map((v) => (v < 0 ? down : up));
+            const config = {
+                type: "bar",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: "Day P&L",
+                        data: data,
+                        backgroundColor: colors,
+                        borderColor: colors,
+                        borderWidth: 0,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    animation: false,
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                title: (items) => {
+                                    const i = items[0] && items[0].dataIndex;
+                                    return days[i] ? (days[i].date || when(days[i].snapshot_at)) : "";
+                                },
+                                label: (item) => "Day P&L: " + money(item.parsed.y)
+                            }
+                        }
+                    },
+                    scales: {
+                        x: axisDefaults,
+                        y: Object.assign({}, axisDefaults, {
+                            ticks: Object.assign({}, axisDefaults.ticks, {
+                                callback: (value) => money(value)
+                            })
+                        })
+                    }
+                }
+            };
+            if (pnlChart) {
+                pnlChart.data = config.data;
+                pnlChart.options = config.options;
+                pnlChart.update();
+            } else {
+                pnlChart = new Chart(ctx, config);
+            }
+        };
+
+        const renderHistory = (data, range) => {
+            const series = (data && data.equity_series) || [];
+            const daily = (data && data.daily) || [];
+            const trades = (data && data.trades) || [];
+            const empty = document.getElementById("history-empty");
+            const root = document.getElementById("history-root");
+            const meta = document.getElementById("history-meta");
+
+            if (!data || (!series.length && !daily.length && !trades.length)) {
+                root.hidden = true;
+                empty.hidden = false;
+                empty.textContent = "No paper-trading history yet. After the agent has run a few cycles, equity and daily P&L charts will show up here.";
+                meta.textContent = "history.json has no points yet.";
+                return;
+            }
+
+            empty.hidden = true;
+            root.hidden = false;
+            const endMs = series.length
+                ? new Date(series[series.length - 1].t).getTime()
+                : Date.now();
+            const eq = series.filter((p) => inRange(p.t, range, endMs));
+            const days = daily.filter((d) => inRange(d.snapshot_at || d.date, range, endMs));
+            meta.textContent = "History updated " + when(data.generated_at) +
+                " · " + series.length + " equity points · range " + range;
+
+            renderEquityChart(eq.length ? eq : series.slice(-1), range);
+            renderPnlChart(days.length ? days : daily.slice(-1), range);
+
+            const recent = trades.slice().reverse().slice(0, 50);
+            const tradeRows = recent.map((t) => {
+                const tr = document.createElement("tr");
+                const cells = [
+                    when(t.filled_at || t.submitted_at || t.logged_at),
+                    t.symbol || "—",
+                    t.side || "—",
+                    t.order_type || "—",
+                    qty(t.filled_qty || t.qty),
+                    money(t.filled_avg_price),
+                    t.status || "—"
+                ];
+                cells.forEach((text) => {
+                    const td = document.createElement("td");
+                    td.textContent = text;
+                    tr.appendChild(td);
+                });
+                return tr;
+            });
+            fillTable(document.getElementById("trades-body"), tradeRows, "No paper trades logged yet.", 7);
+        };
+
+        const setRange = (range) => {
+            currentRange = range;
+            document.querySelectorAll(".range-toggle button").forEach((btn) => {
+                btn.setAttribute("aria-pressed", btn.getAttribute("data-range") === range ? "true" : "false");
+            });
+            if (historyData) renderHistory(historyData, currentRange);
+        };
+
+        document.querySelectorAll(".range-toggle button").forEach((btn) => {
+            btn.addEventListener("click", () => setRange(btn.getAttribute("data-range")));
+        });
+
+        const renderStatus = (data) => {
             document.getElementById("status-error").hidden = true;
             document.getElementById("status-root").hidden = false;
 
@@ -419,43 +703,49 @@
                 return tr;
             });
             fillTable(document.getElementById("positions-body"), posRows, "No open paper positions.", 7);
-
-            const tradeRows = (data.last_trades || []).map((t) => {
-                const tr = document.createElement("tr");
-                const cells = [
-                    when(t.filled_at || t.submitted_at || t.logged_at),
-                    t.symbol || "—",
-                    t.side || "—",
-                    t.order_type || "—",
-                    qty(t.filled_qty || t.qty),
-                    money(t.filled_avg_price),
-                    t.status || "—"
-                ];
-                cells.forEach((text) => {
-                    const td = document.createElement("td");
-                    td.textContent = text;
-                    tr.appendChild(td);
-                });
-                return tr;
-            });
-            fillTable(document.getElementById("trades-body"), tradeRows, "No paper trades logged yet.", 7);
         };
 
-        const load = () => {
-            fetch(STATUS_URL + "?t=" + Date.now(), { cache: "no-store" })
+        const bust = (url) => url + "?t=" + Date.now();
+
+        const loadStatus = () => {
+            return fetch(bust(STATUS_URL), { cache: "no-store" })
                 .then((res) => {
                     if (!res.ok) {
-                        throw new Error("status.json is not available yet (HTTP " + res.status + "). Run the paper trader with GitHub publishing configured, or copy a status.json next to this page.");
+                        throw new Error("status.json is not available yet (HTTP " + res.status + "). Run the paper trader with publishing configured, or copya status.json next to this page.");
                     }
                     return res.json();
                 })
-                .then(render)
+                .then(renderStatus)
                 .catch((err) => {
                     document.getElementById("status-meta").textContent = "Status has not loaded.";
                     showError(err.message || String(err));
                 });
         };
 
+        const loadHistory = () => {
+            return fetch(bust(HISTORY_URL), { cache: "no-store" })
+                .then((res) => {
+                    if (!res.ok) {
+                        throw new Error("missing");
+                    }
+                    return res.json();
+                })
+                .then((data) => {
+                    historyData = data;
+                    renderHistory(historyData, currentRange);
+                })
+                .catch(() => {
+                    historyData = { equity_series: [], daily: [], trades: [] };
+                    renderHistory(null, currentRange);
+                    document.getElementById("history-empty").hidden = false;
+                    document.getElementById("history-empty").textContent =
+                        "No history.json yet. After a published run, equity and daily P&L charts will appear here.";
+                    document.getElementById("history-meta").textContent = "history.json is not available yet.";
+                });
+        };
+
+        const load = () => Promise.all([loadStatus(), loadHistory()]);
+        setRange("All");
         load();
         setInterval(load, 60 * 1000);
     })();
