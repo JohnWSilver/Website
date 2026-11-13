@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-11-12T19:45:36.645986-08:00",
+  "timezone": "America/Los_Angeles",
+  "paper": true,
+  "market_open": false,
+  "next_open": "2026-11-13T06:30:00-08:00",
+  "next_close": "2026-11-13T13:00:00-08:00",
+  "account": {
+    "status": "AccountStatus.ACTIVE",
+    "equity": "100000",
+    "cash": "100000",
+    "buying_power": "400000",
+    "last_equity": "100000",
+    "day_pnl": "0.0"
+  },
+  "open_positions": [],
+  "last_trades": []
+}
