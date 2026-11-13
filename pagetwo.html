@@ -3,7 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Two</title>
+    <title>John Silver | Paper Trading Status</title>
+    <!--
+      INTEGRATION NOTE (do not skip — a pagetwo.html already exists)
+
+      The live repo https://github.com/JohnWSilver/Website already has a
+      pagetwo.html: a short "Welcome to page two of the portfolio" card in
+      this same dark slate / sky-blue style, linked from the Home nav as
+      "Howdy". This file is a *proposed* replacement that keeps that look
+      (CSS variables, typography, nav, footer) and turns the page into the
+      paper-trading status view.
+
+      This starter project does NOT push this file to the website repo.
+      status_publisher.py only updates status.json (same folder as this page).
+
+      To integrate, pick one:
+        A) Replace the existing pagetwo.html with this file (after review).
+        B) Keep the current welcome card and paste everything between
+           the "STATUS SECTION" comments below into the existing page,
+           plus the page-specific CSS and the <script> at the bottom.
+
+      status.json is fetched from the same directory (./status.json).
+      GitHub Pages is not enabled on the repo as of 2026-11-12; enable
+      Pages from the main branch, site root, so this page and status.json
+      are served together (expected URL:
+      https://johnwsilver.github.io/Website/pagetwo.html).
+    -->
     <style>
         :root {
             --bg-color: #0f172a;
@@ -11,6 +36,10 @@
             --accent-color: #38bdf8;
             --secondary-bg: #1e293b;
             --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --muted: #94a3b8;
+            --up: #34d399;
+            --down: #fb7185;
+            --border: #334155;
         }
 
         * {
@@ -24,62 +53,413 @@
             color: var(--text-color);
             font-family: var(--font-main);
             line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px;
+            background: rgba(15, 23, 42, 0.9);
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            gap: 30px;
+            z-index: 1000;
         }
 
-        .container {
-            max-width: 800px;
-            text-align: center;
-            background: var(--secondary-bg);
-            padding: 60px;
-            border-radius: 15px;
-            border: 1px solid #334155;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
         }
 
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
+        nav a:hover,
+        nav a[aria-current="page"] {
             color: var(--accent-color);
         }
 
-        p {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
+        main {
+            padding: 120px 20px 80px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+        }
+
+        .lede {
+            font-size: 1.15rem;
             opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 42rem;
         }
 
-        .back-link {
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0 40px;
+        }
+
+        .card {
+            background: var(--secondary-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .card .label {
+            color: var(--muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 6px;
+        }
+
+        .card .value {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .badge {
             display: inline-block;
-            padding: 12px 24px;
-            background-color: var(--accent-color);
-            color: #0f172a;
-            text-decoration: none;
-            border-radius: 5px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.8rem;
             font-weight: bold;
-            transition: transform 0.3s, background-color 0.3s;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
         }
 
-        .back-link:hover {
-            transform: translateY(-2px);
-            background-color: #7dd3fc;
+        .badge-paper {
+            background: var(--accent-color);
+            color: #0f172a;
+        }
+
+        .badge-open {
+            background: var(--up);
+            color: #0f172a;
+        }
+
+        .badge-closed {
+            background: var(--border);
+            color: var(--text-color);
+        }
+
+        .up { color: var(--up); }
+        .down { color: var(--down); }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 10px 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            color: var(--muted);
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin-bottom: 48px;
+        }
+
+        .status-meta {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin: 8px 0 24px;
+        }
+
+        .error {
+            background: var(--secondary-bg);
+            border: 1px solid var(--down);
+            color: var(--text-color);
+            padding: 20px 24px;
+            border-radius: 10px;
+            margin: 20px 0 40px;
+        }
+
+        .disclaimer {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #0a1120;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .container { padding: 30px; }
+            h1 { font-size: 2.2rem; }
+            main { padding-top: 100px; }
+            nav { gap: 16px; font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>John Silver</h1>
-        <p>Welcome to page two of the portfolio.</p>
-        <a href="index.html" class="back-link">Back to Home</a>
-    </div>
+
+    <nav>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="pagetwo.html" aria-current="page">Howdy</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <main>
+        <p><span class="badge badge-paper" id="paper-badge">Paper trading</span></p>
+        <h1>Howdy — <span class="highlight">paper status</span></h1>
+        <p class="lede">
+            Live snapshot from the Alpaca paper-trading agent. Simulated only:
+            no live orders, and nothing here is financial advice.
+        </p>
+
+        <!-- ===== STATUS SECTION (paste this block into an existing pagetwo.html if you are not replacing the whole file) ===== -->
+        <p class="status-meta" id="status-meta">Loading status.json…</p>
+        <div id="status-error" hidden class="error"></div>
+
+        <div id="status-root" hidden>
+            <div class="grid" id="kpi-grid"></div>
+
+            <h2>Open positions</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Symbol</th>
+                            <th>Qty</th>
+                            <th>Side</th>
+                            <th>Avg entry</th>
+                            <th>Last</th>
+                            <th>Market value</th>
+                            <th>Unrealized P&amp;L</th>
+                        </tr>
+                    </thead>
+                    <tbody id="positions-body"></tbody>
+                </table>
+            </div>
+
+            <h2>Recent paper trades</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>When</th>
+                            <th>Symbol</th>
+                            <th>Side</th>
+                            <th>Type</th>
+                            <th>Qty</th>
+                            <th>Fill price</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trades-body"></tbody>
+                </table>
+            </div>
+        </div>
+        <!-- ===== END STATUS SECTION ===== -->
+
+        <p class="disclaimer">
+            Paper and backtest results do not guarantee real returns. The agent’s
+            example strategy is a placeholder, not a recommendation. This page
+            reads <code>status.json</code> from the same folder and refreshes about once a minute.
+        </p>
+    </main>
+
+    <footer>
+        &copy; <script>document.write(new Date().getFullYear())</script> John Silver | Systems Engineering Portfolio
+    </footer>
+
+    <script>
+    (function () {
+        const STATUS_URL = "status.json";
+        const TZ = "America/Los_Angeles";
+
+        const money = (value) => {
+            if (value === null || value === undefined || value === "") return "—";
+            const n = Number(value);
+            if (Number.isNaN(n)) return String(value);
+            return n.toLocaleString("en-US", { style: "currency", currency: "USD" });
+        };
+
+        const qty = (value) => {
+            if (value === null || value === undefined || value === "") return "—";
+            const n = Number(value);
+            if (Number.isNaN(n)) return String(value);
+            return n.toLocaleString("en-US", { maximumFractionDigits: 4 });
+        };
+
+        const pnlClass = (value) => {
+            const n = Number(value);
+            if (Number.isNaN(n) || n === 0) return "";
+            return n > 0 ? "up" : "down";
+        };
+
+        const when = (value) => {
+            if (!value) return "—";
+            const d = new Date(value);
+            if (Number.isNaN(d.getTime())) return String(value);
+            return new Intl.DateTimeFormat("en-US", {
+                timeZone: TZ,
+                dateStyle: "medium",
+                timeStyle: "short"
+            }).format(d) + " PT";
+        };
+
+        const showError = (message) => {
+            const box = document.getElementById("status-error");
+            box.hidden = false;
+            box.textContent = message;
+            document.getElementById("status-root").hidden = true;
+        };
+
+        const fillTable = (tbody, rows, emptyText, columns) => {
+            tbody.replaceChildren();
+            if (!rows || !rows.length) {
+                const tr = document.createElement("tr");
+                const td = document.createElement("td");
+                td.colSpan = columns;
+                td.textContent = emptyText;
+                tr.appendChild(td);
+                tbody.appendChild(tr);
+                return;
+            }
+            rows.forEach((row) => tbody.appendChild(row));
+        };
+
+        const render = (data) => {
+            document.getElementById("status-error").hidden = true;
+            document.getElementById("status-root").hidden = false;
+
+            const account = data.account || {};
+            const open = Boolean(data.market_open);
+            const badge = document.getElementById("paper-badge");
+            badge.textContent = data.paper === false ? "Warning: not marked paper" : "Paper trading";
+
+            document.getElementById("status-meta").textContent =
+                "Updated " + when(data.generated_at) +
+                " · next " + (open ? "close " + when(data.next_close) : "open " + when(data.next_open));
+
+            const kpis = [
+                { label: "Market", value: open ? "Open" : "Closed", cls: open ? "up" : "" },
+                { label: "Equity", value: money(account.equity) },
+                { label: "Cash", value: money(account.cash) },
+                { label: "Day P&L", value: money(account.day_pnl), cls: pnlClass(account.day_pnl) },
+                { label: "Buying power", value: money(account.buying_power) },
+                { label: "Account", value: account.status || "—" }
+            ];
+            const grid = document.getElementById("kpi-grid");
+            grid.replaceChildren();
+            kpis.forEach((item) => {
+                const card = document.createElement("div");
+                card.className = "card";
+                const label = document.createElement("div");
+                label.className = "label";
+                label.textContent = item.label;
+                const value = document.createElement("div");
+                value.className = "value" + (item.cls ? " " + item.cls : "");
+                value.textContent = item.value;
+                card.appendChild(label);
+                card.appendChild(value);
+                grid.appendChild(card);
+            });
+
+            const posRows = (data.open_positions || []).map((p) => {
+                const tr = document.createElement("tr");
+                const cells = [
+                    p.symbol || "—",
+                    qty(p.qty),
+                    p.side || "—",
+                    money(p.avg_entry_price),
+                    money(p.current_price),
+                    money(p.market_value),
+                    money(p.unrealized_pl)
+                ];
+                cells.forEach((text, i) => {
+                    const td = document.createElement("td");
+                    td.textContent = text;
+                    if (i === 6) td.className = pnlClass(p.unrealized_pl);
+                    tr.appendChild(td);
+                });
+                return tr;
+            });
+            fillTable(document.getElementById("positions-body"), posRows, "No open paper positions.", 7);
+
+            const tradeRows = (data.last_trades || []).map((t) => {
+                const tr = document.createElement("tr");
+                const cells = [
+                    when(t.filled_at || t.submitted_at || t.logged_at),
+                    t.symbol || "—",
+                    t.side || "—",
+                    t.order_type || "—",
+                    qty(t.filled_qty || t.qty),
+                    money(t.filled_avg_price),
+                    t.status || "—"
+                ];
+                cells.forEach((text) => {
+                    const td = document.createElement("td");
+                    td.textContent = text;
+                    tr.appendChild(td);
+                });
+                return tr;
+            });
+            fillTable(document.getElementById("trades-body"), tradeRows, "No paper trades logged yet.", 7);
+        };
+
+        const load = () => {
+            fetch(STATUS_URL + "?t=" + Date.now(), { cache: "no-store" })
+                .then((res) => {
+                    if (!res.ok) {
+                        throw new Error("status.json is not available yet (HTTP " + res.status + "). Run the paper trader with GitHub publishing configured, or copy a status.json next to this page.");
+                    }
+                    return res.json();
+                })
+                .then(render)
+                .catch((err) => {
+                    document.getElementById("status-meta").textContent = "Status has not loaded.";
+                    showError(err.message || String(err));
+                });
+        };
+
+        load();
+        setInterval(load, 60 * 1000);
+    })();
+    </script>
+
 </body>
 </html>
