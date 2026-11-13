@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-12T21:13:57.913028-08:00",
+  "generated_at": "2026-11-13T06:30:05.003337-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
-  "market_open": false,
-  "next_open": "2026-11-13T06:30:00-08:00",
+  "market_open": true,
+  "next_open": "2026-11-16T06:30:00-08:00",
   "next_close": "2026-11-13T13:00:00-08:00",
   "account": {
     "status": "ACTIVE",
     "equity": "100000",
     "cash": "100000",
     "buying_power": "400000",
-    "last_equity": "100000",
-    "day_pnl": "0.0"
+    "last_equity": "0",
+    "day_pnl": "100000.0"
   },
   "open_positions": [],
   "last_trades": []
