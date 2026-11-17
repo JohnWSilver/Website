@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T06:30:07.004858-08:00",
+  "generated_at": "2026-11-17T06:45:17.440324-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "equity_series": [
@@ -398,6 +398,12 @@
       "equity": "100000",
       "cash": "100000",
       "day_pnl": "0"
+    },
+    {
+      "t": "2026-11-17T06:45:17.434596-08:00",
+      "equity": "100135.77",
+      "cash": "55368.07",
+      "day_pnl": "135.77"
     }
   ],
   "daily": [
@@ -424,56 +430,116 @@
     },
     {
       "date": "2026-11-17",
-      "equity": "100000",
-      "cash": "100000",
-      "day_pnl": "0",
-      "snapshot_at": "2026-11-17T06:30:06.999932-08:00"
+      "equity": "100135.77",
+      "cash": "55368.07",
+      "day_pnl": "135.77",
+      "snapshot_at": "2026-11-17T06:45:17.434596-08:00"
     }
   ],
   "trades": [
     {
-      "logged_at": "2026-11-17T14:30:06.646515+00:00",
-      "alpaca_order_id": "522f95bd-32fe-489f-a17b-91cd6daa3a85",
-      "client_order_id": "7293a79e-df54-46d0-bba4-1207b8cc66a8",
-      "symbol": "BA",
-      "side": "buy",
-      "order_type": "market",
-      "qty": "90",
-      "filled_qty": "0",
-      "filled_avg_price": null,
-      "limit_price": null,
-      "status": "pending_new",
-      "submitted_at": "2026-11-17T14:30:05.131823Z",
-      "filled_at": null
-    },
-    {
-      "logged_at": "2026-11-17T14:30:06.642406+00:00",
+      "logged_at": "2026-11-17T14:45:17.242382+00:00",
       "alpaca_order_id": "dc85be9a-c8f6-4610-8f3a-370435593eee",
       "client_order_id": "18b34f37-043a-410c-bace-a3f7801a5572",
       "symbol": "GOOGL",
       "side": "buy",
       "order_type": "market",
       "qty": "52",
-      "filled_qty": "0",
-      "filled_avg_price": null,
+      "filled_qty": "52",
+      "filled_avg_price": "282.61",
       "limit_price": null,
-      "status": "pending_new",
-      "submitted_at": "2026-11-17T14:30:05.701863Z",
-      "filled_at": null
+      "status": "filled",
+      "submitted_at": "2026-11-17T14:30:15.637556Z",
+      "filled_at": "2026-11-17T14:31:55.172729Z"
     },
     {
-      "logged_at": "2026-11-17T14:30:06.636607+00:00",
+      "logged_at": "2026-11-17T14:45:17.238288+00:00",
       "alpaca_order_id": "ff09d957-7290-48e1-98b9-23efb0486502",
       "client_order_id": "7d76b43d-3940-49ba-a6fb-533c4513f0a1",
       "symbol": "CAT",
       "side": "buy",
       "order_type": "market",
       "qty": "26",
+      "filled_qty": "26",
+      "filled_avg_price": "574.36",
+      "limit_price": null,
+      "status": "filled",
+      "submitted_at": "2026-11-17T14:30:16.069269Z",
+      "filled_at": "2026-11-17T14:32:01.233075Z"
+    },
+    {
+      "logged_at": "2026-11-17T14:45:17.247671+00:00",
+      "alpaca_order_id": "522f95bd-32fe-489f-a17b-91cd6daa3a85",
+      "client_order_id": "7293a79e-df54-46d0-bba4-1207b8cc66a8",
+      "symbol": "BA",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "90",
+      "filled_qty": "90",
+      "filled_avg_price": "166.698333",
+      "limit_price": null,
+      "status": "filled",
+      "submitted_at": "2026-11-17T14:30:14.512988Z",
+      "filled_at": "2026-11-17T14:33:19.241364Z"
+    },
+    {
+      "logged_at": "2026-11-17T14:45:17.234496+00:00",
+      "alpaca_order_id": "9cabb797-e1a3-4fb0-8e4b-f5869768d277",
+      "client_order_id": "4ead53a8-b8fe-43d2-ab86-055662f70e76",
+      "symbol": "NFLX",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "248",
       "filled_qty": "0",
       "filled_avg_price": null,
       "limit_price": null,
       "status": "pending_new",
-      "submitted_at": "2026-11-17T14:30:05.911827Z",
+      "submitted_at": "2026-11-17T14:45:16.762865Z",
+      "filled_at": null
+    },
+    {
+      "logged_at": "2026-11-17T14:45:17.229395+00:00",
+      "alpaca_order_id": "f26e9fef-516a-4f89-bbbe-9255ff6b530d",
+      "client_order_id": "d49a2e07-a78d-4163-b116-71493827d767",
+      "symbol": "CRM",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "73",
+      "filled_qty": "0",
+      "filled_avg_price": null,
+      "limit_price": null,
+      "status": "pending_new",
+      "submitted_at": "2026-11-17T14:45:16.877933Z",
+      "filled_at": null
+    },
+    {
+      "logged_at": "2026-11-17T14:45:17.225368+00:00",
+      "alpaca_order_id": "fe5d8d87-bda5-4948-9156-c2fff4ba6365",
+      "client_order_id": "d72b8bc3-c960-4abb-8bd8-55022abe6c4c",
+      "symbol": "IBM",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "63",
+      "filled_qty": "0",
+      "filled_avg_price": null,
+      "limit_price": null,
+      "status": "pending_new",
+      "submitted_at": "2026-11-17T14:45:16.983375Z",
+      "filled_at": null
+    },
+    {
+      "logged_at": "2026-11-17T14:45:17.221512+00:00",
+      "alpaca_order_id": "326b17f1-b4c8-4146-8a38-e9f4a01b5d12",
+      "client_order_id": "6327b5de-5dcd-47c5-9ed5-992818db432d",
+      "symbol": "NVDA",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "67",
+      "filled_qty": "0",
+      "filled_avg_price": null,
+      "limit_price": null,
+      "status": "pending_new",
+      "submitted_at": "2026-11-17T14:45:17.078650Z",
       "filled_at": null
     }
   ]
