@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T06:30:09.943213-08:00",
+  "generated_at": "2026-11-18T06:45:17.840019-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "equity_series": [
@@ -566,6 +566,12 @@
       "equity": "98400.28",
       "cash": "-21.49",
       "day_pnl": "283.84"
+    },
+    {
+      "t": "2026-11-18T06:45:17.835131-08:00",
+      "equity": "97208.96",
+      "cash": "-21.49",
+      "day_pnl": "-907.48"
     }
   ],
   "daily": [
@@ -599,10 +605,10 @@
     },
     {
       "date": "2026-11-18",
-      "equity": "98400.28",
+      "equity": "97208.96",
       "cash": "-21.49",
-      "day_pnl": "283.84",
-      "snapshot_at": "2026-11-18T06:30:09.936873-08:00"
+      "day_pnl": "-907.48",
+      "snapshot_at": "2026-11-18T06:45:17.835131-08:00"
     }
   ],
   "trades": [
@@ -710,6 +716,21 @@
       "status": "filled",
       "submitted_at": "2026-11-17T14:45:20.139926Z",
       "filled_at": "2026-11-17T14:45:24.090293Z"
+    },
+    {
+      "logged_at": "2026-11-18T14:45:17.540033+00:00",
+      "alpaca_order_id": "a762f690-8b08-4009-98a7-9f167a674485",
+      "client_order_id": "fb115ceb-1ba7-4679-af0d-c747a276701f",
+      "symbol": "CRM",
+      "side": "sell",
+      "order_type": "market",
+      "qty": "73",
+      "filled_qty": "0",
+      "filled_avg_price": null,
+      "limit_price": null,
+      "status": "pending_new",
+      "submitted_at": "2026-11-18T14:45:17.495074Z",
+      "filled_at": null
     }
   ]
 }

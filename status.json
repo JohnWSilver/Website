@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T06:30:09.945010-08:00",
+  "generated_at": "2026-11-18T06:45:17.841905-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "market_open": true,
@@ -7,11 +7,11 @@
   "next_close": "2026-11-18T13:00:00-08:00",
   "account": {
     "status": "ACTIVE",
-    "equity": "98400.28",
+    "equity": "97208.96",
     "cash": "-21.49",
-    "buying_power": "275495",
+    "buying_power": "272159.31",
     "last_equity": "98116.44",
-    "day_pnl": "283.8399999999965"
+    "day_pnl": "-907.4799999999959"
   },
   "open_positions": [
     {
@@ -19,87 +19,102 @@
       "qty": "90",
       "side": "long",
       "avg_entry_price": "166.698333",
-      "current_price": "163.3",
-      "market_value": "14697",
-      "unrealized_pl": "-305.84997",
-      "unrealized_plpc": "-0.02039",
+      "current_price": "162.705",
+      "market_value": "14643.45",
+      "unrealized_pl": "-359.39997",
+      "unrealized_plpc": "-0.02396",
       "cost_basis": "15002.84997",
-      "change_today": "-0.00372"
+      "change_today": "-0.00735"
     },
     {
       "symbol": "CAT",
       "qty": "26",
       "side": "long",
       "avg_entry_price": "574.36",
-      "current_price": "576.33",
-      "market_value": "14984.58",
-      "unrealized_pl": "51.22",
-      "unrealized_plpc": "0.00343",
+      "current_price": "554.97",
+      "market_value": "14429.22",
+      "unrealized_pl": "-504.14",
+      "unrealized_plpc": "-0.03376",
       "cost_basis": "14933.36",
-      "change_today": "0.00971"
+      "change_today": "-0.02772"
     },
     {
       "symbol": "CRM",
       "qty": "73",
       "side": "long",
       "avg_entry_price": "204.75",
-      "current_price": "191.34",
-      "market_value": "13967.82",
-      "unrealized_pl": "-978.93",
-      "unrealized_plpc": "-0.06549",
+      "current_price": "187.555",
+      "market_value": "13691.515",
+      "unrealized_pl": "-1255.235",
+      "unrealized_plpc": "-0.08398",
       "cost_basis": "14946.75",
-      "change_today": "-0.01635"
+      "change_today": "-0.03581"
     },
     {
       "symbol": "GOOGL",
       "qty": "52",
       "side": "long",
       "avg_entry_price": "282.61",
-      "current_price": "283.24",
-      "market_value": "14728.48",
-      "unrealized_pl": "32.76",
-      "unrealized_plpc": "0.00223",
+      "current_price": "281.67",
+      "market_value": "14646.84",
+      "unrealized_pl": "-48.88",
+      "unrealized_plpc": "-0.00333",
       "cost_basis": "14695.72",
-      "change_today": "0.01085"
+      "change_today": "0.00525"
     },
     {
       "symbol": "IBM",
       "qty": "63",
       "side": "long",
       "avg_entry_price": "238.08",
-      "current_price": "230.64",
-      "market_value": "14530.32",
-      "unrealized_pl": "-468.72",
-      "unrealized_plpc": "-0.03125",
+      "current_price": "231.89",
+      "market_value": "14609.07",
+      "unrealized_pl": "-389.97",
+      "unrealized_plpc": "-0.026",
       "cost_basis": "14999.04",
-      "change_today": "-0.00195"
+      "change_today": "0.00346"
     },
     {
       "symbol": "NFLX",
       "qty": "248",
       "side": "long",
       "avg_entry_price": "60.450161",
-      "current_price": "59.95",
-      "market_value": "14867.6",
-      "unrealized_pl": "-124.039928",
-      "unrealized_plpc": "-0.00827",
+      "current_price": "59.945",
+      "market_value": "14866.36",
+      "unrealized_pl": "-125.279928",
+      "unrealized_plpc": "-0.00836",
       "cost_basis": "14991.639928",
-      "change_today": "0.00452"
+      "change_today": "0.00444"
     },
     {
       "symbol": "NVDA",
       "qty": "67",
       "side": "long",
       "avg_entry_price": "156.001791",
-      "current_price": "159.43",
-      "market_value": "10681.81",
-      "unrealized_pl": "229.690003",
-      "unrealized_plpc": "0.02198",
+      "current_price": "154.3329",
+      "market_value": "10340.3043",
+      "unrealized_pl": "-111.815697",
+      "unrealized_plpc": "-0.0107",
       "cost_basis": "10452.119997",
-      "change_today": "0.02554"
+      "change_today": "-0.00725"
     }
   ],
   "last_trades": [
+    {
+      "logged_at": "2026-11-18T14:45:17.540033+00:00",
+      "alpaca_order_id": "a762f690-8b08-4009-98a7-9f167a674485",
+      "client_order_id": "fb115ceb-1ba7-4679-af0d-c747a276701f",
+      "symbol": "CRM",
+      "side": "sell",
+      "order_type": "market",
+      "qty": "73",
+      "filled_qty": "0",
+      "filled_avg_price": null,
+      "limit_price": null,
+      "status": "pending_new",
+      "submitted_at": "2026-11-18T14:45:17.495074Z",
+      "filled_at": null
+    },
     {
       "logged_at": "2026-11-17T14:45:17.123557+00:00",
       "alpaca_order_id": "326b17f1-b4c8-4146-8a38-e9f4a01b5d12",
