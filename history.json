@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T13:07:53.966929-08:00",
+  "generated_at": "2026-11-17T17:28:02.810129-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "equity_series": [
@@ -554,6 +554,12 @@
       "equity": "98150.3",
       "cash": "-21.48",
       "day_pnl": "-1849.7"
+    },
+    {
+      "t": "2026-11-17T17:28:02.797513-08:00",
+      "equity": "99133.31",
+      "cash": "-21.48",
+      "day_pnl": "-866.69"
     }
   ],
   "daily": [
@@ -580,15 +586,15 @@
     },
     {
       "date": "2026-11-17",
-      "equity": "98150.3",
+      "equity": "99133.31",
       "cash": "-21.48",
-      "day_pnl": "-1849.7",
-      "snapshot_at": "2026-11-17T13:07:53.961987-08:00"
+      "day_pnl": "-866.69",
+      "snapshot_at": "2026-11-17T17:28:02.797513-08:00"
     }
   ],
   "trades": [
     {
-      "logged_at": "2026-11-17T20:47:50.852026+00:00",
+      "logged_at": "2026-11-17T14:30:05.826242+00:00",
       "alpaca_order_id": "dc85be9a-c8f6-4610-8f3a-370435593eee",
       "client_order_id": "18b34f37-043a-410c-bace-a3f7801a5572",
       "symbol": "GOOGL",
@@ -603,7 +609,7 @@
       "filled_at": "2026-11-17T14:31:55.172729Z"
     },
     {
-      "logged_at": "2026-11-17T20:47:50.847913+00:00",
+      "logged_at": "2026-11-17T14:30:06.117721+00:00",
       "alpaca_order_id": "ff09d957-7290-48e1-98b9-23efb0486502",
       "client_order_id": "7d76b43d-3940-49ba-a6fb-533c4513f0a1",
       "symbol": "CAT",
@@ -618,7 +624,7 @@
       "filled_at": "2026-11-17T14:32:01.233075Z"
     },
     {
-      "logged_at": "2026-11-17T20:47:50.856267+00:00",
+      "logged_at": "2026-11-17T14:30:05.439714+00:00",
       "alpaca_order_id": "522f95bd-32fe-489f-a17b-91cd6daa3a85",
       "client_order_id": "7293a79e-df54-46d0-bba4-1207b8cc66a8",
       "symbol": "BA",
@@ -633,7 +639,7 @@
       "filled_at": "2026-11-17T14:33:19.241364Z"
     },
     {
-      "logged_at": "2026-11-17T20:47:50.838594+00:00",
+      "logged_at": "2026-11-17T14:45:16.934422+00:00",
       "alpaca_order_id": "f26e9fef-516a-4f89-bbbe-9255ff6b530d",
       "client_order_id": "d49a2e07-a78d-4163-b116-71493827d767",
       "symbol": "CRM",
@@ -648,7 +654,7 @@
       "filled_at": "2026-11-17T14:45:21.219912Z"
     },
     {
-      "logged_at": "2026-11-17T20:47:50.835292+00:00",
+      "logged_at": "2026-11-17T14:45:17.027143+00:00",
       "alpaca_order_id": "fe5d8d87-bda5-4948-9156-c2fff4ba6365",
       "client_order_id": "d72b8bc3-c960-4abb-8bd8-55022abe6c4c",
       "symbol": "IBM",
@@ -663,7 +669,7 @@
       "filled_at": "2026-11-17T14:45:21.632780Z"
     },
     {
-      "logged_at": "2026-11-17T20:47:50.830143+00:00",
+      "logged_at": "2026-11-17T14:45:17.123557+00:00",
       "alpaca_order_id": "326b17f1-b4c8-4146-8a38-e9f4a01b5d12",
       "client_order_id": "6327b5de-5dcd-47c5-9ed5-992818db432d",
       "symbol": "NVDA",
@@ -678,7 +684,7 @@
       "filled_at": "2026-11-17T14:45:23.745881Z"
     },
     {
-      "logged_at": "2026-11-17T20:47:50.843962+00:00",
+      "logged_at": "2026-11-17T14:45:16.819350+00:00",
       "alpaca_order_id": "9cabb797-e1a3-4fb0-8e4b-f5869768d277",
       "client_order_id": "4ead53a8-b8fe-43d2-ab86-055662f70e76",
       "symbol": "NFLX",
