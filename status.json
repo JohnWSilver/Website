@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T07:00:27.710173-08:00",
+  "generated_at": "2026-11-18T07:15:35.098528-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "market_open": true,
@@ -7,11 +7,11 @@
   "next_close": "2026-11-18T13:00:00-08:00",
   "account": {
     "status": "ACTIVE",
-    "equity": "97762.1",
-    "cash": "13653.98",
-    "buying_power": "276950.95",
+    "equity": "97112.07",
+    "cash": "486.28",
+    "buying_power": "272497.32",
     "last_equity": "98116.44",
-    "day_pnl": "-354.3399999999965"
+    "day_pnl": "-1004.3699999999953"
   },
   "open_positions": [
     {
@@ -19,72 +19,84 @@
       "qty": "90",
       "side": "long",
       "avg_entry_price": "166.698333",
-      "current_price": "163.615",
-      "market_value": "14725.35",
-      "unrealized_pl": "-277.49997",
-      "unrealized_plpc": "-0.0185",
+      "current_price": "162.735",
+      "market_value": "14646.15",
+      "unrealized_pl": "-356.69997",
+      "unrealized_plpc": "-0.02378",
       "cost_basis": "15002.84997",
-      "change_today": "-0.0018"
+      "change_today": "-0.00717"
     },
     {
       "symbol": "CAT",
       "qty": "26",
       "side": "long",
       "avg_entry_price": "574.36",
-      "current_price": "564.69",
-      "market_value": "14681.94",
-      "unrealized_pl": "-251.42",
-      "unrealized_plpc": "-0.01684",
+      "current_price": "557.04",
+      "market_value": "14483.04",
+      "unrealized_pl": "-450.32",
+      "unrealized_plpc": "-0.03016",
       "cost_basis": "14933.36",
-      "change_today": "-0.01069"
+      "change_today": "-0.02409"
     },
     {
       "symbol": "GOOGL",
       "qty": "52",
       "side": "long",
       "avg_entry_price": "282.61",
-      "current_price": "283.975",
-      "market_value": "14766.7",
-      "unrealized_pl": "70.98",
-      "unrealized_plpc": "0.00483",
+      "current_price": "283.47",
+      "market_value": "14740.44",
+      "unrealized_pl": "44.72",
+      "unrealized_plpc": "0.00304",
       "cost_basis": "14695.72",
-      "change_today": "0.01347"
+      "change_today": "0.01167"
     },
     {
       "symbol": "IBM",
       "qty": "63",
       "side": "long",
       "avg_entry_price": "238.08",
-      "current_price": "232.335",
-      "market_value": "14637.105",
-      "unrealized_pl": "-361.935",
-      "unrealized_plpc": "-0.02413",
+      "current_price": "231.385",
+      "market_value": "14577.255",
+      "unrealized_pl": "-421.785",
+      "unrealized_plpc": "-0.02812",
       "cost_basis": "14999.04",
-      "change_today": "0.00539"
+      "change_today": "0.00128"
     },
     {
       "symbol": "NFLX",
       "qty": "248",
       "side": "long",
       "avg_entry_price": "60.450161",
-      "current_price": "59.99",
-      "market_value": "14877.52",
-      "unrealized_pl": "-114.119928",
-      "unrealized_plpc": "-0.00761",
+      "current_price": "59.625",
+      "market_value": "14787",
+      "unrealized_pl": "-204.639928",
+      "unrealized_plpc": "-0.01365",
       "cost_basis": "14991.639928",
-      "change_today": "0.00519"
+      "change_today": "-0.00092"
     },
     {
       "symbol": "NVDA",
       "qty": "67",
       "side": "long",
       "avg_entry_price": "156.001791",
-      "current_price": "155.535",
-      "market_value": "10420.845",
-      "unrealized_pl": "-31.274997",
-      "unrealized_plpc": "-0.00299",
+      "current_price": "154.7",
+      "market_value": "10364.9",
+      "unrealized_pl": "-87.219997",
+      "unrealized_plpc": "-0.00834",
       "cost_basis": "10452.119997",
-      "change_today": "0.00048"
+      "change_today": "-0.00489"
+    },
+    {
+      "symbol": "UNH",
+      "qty": "35",
+      "side": "long",
+      "avg_entry_price": "376.22",
+      "current_price": "372.2",
+      "market_value": "13027",
+      "unrealized_pl": "-140.7",
+      "unrealized_plpc": "-0.01069",
+      "cost_basis": "13167.7",
+      "change_today": "-0.04486"
     }
   ],
   "last_trades": [
@@ -96,12 +108,12 @@
       "side": "buy",
       "order_type": "market",
       "qty": "35",
-      "filled_qty": "0",
-      "filled_avg_price": null,
+      "filled_qty": "35",
+      "filled_avg_price": "376.22",
       "limit_price": null,
-      "status": "pending_new",
-      "submitted_at": "2026-11-18T15:00:27.347969Z",
-      "filled_at": null
+      "status": "filled",
+      "submitted_at": "2026-11-18T15:00:32.660885Z",
+      "filled_at": "2026-11-18T15:00:34.667961Z"
     },
     {
       "logged_at": "2026-11-18T14:45:17.540033+00:00",
