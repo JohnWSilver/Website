@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T11:32:31.122366-08:00",
+  "generated_at": "2026-11-18T11:47:37.499818-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "equity_series": [
@@ -686,6 +686,12 @@
       "equity": "95995.71",
       "cash": "486.28",
       "day_pnl": "-2120.73"
+    },
+    {
+      "t": "2026-11-18T11:47:37.494663-08:00",
+      "equity": "95921.67",
+      "cash": "12565.13",
+      "day_pnl": "-2194.77"
     }
   ],
   "daily": [
@@ -719,10 +725,10 @@
     },
     {
       "date": "2026-11-18",
-      "equity": "95995.71",
-      "cash": "486.28",
-      "day_pnl": "-2120.73",
-      "snapshot_at": "2026-11-18T11:32:31.116917-08:00"
+      "equity": "95921.67",
+      "cash": "12565.13",
+      "day_pnl": "-2194.77",
+      "snapshot_at": "2026-11-18T11:47:37.494663-08:00"
     }
   ],
   "trades": [
@@ -869,11 +875,26 @@
       "side": "sell",
       "order_type": "market",
       "qty": "35",
+      "filled_qty": "35",
+      "filled_avg_price": "345.11",
+      "limit_price": null,
+      "status": "filled",
+      "submitted_at": "2026-11-18T19:32:30.801657Z",
+      "filled_at": "2026-11-18T19:32:31.699510Z"
+    },
+    {
+      "logged_at": "2026-11-18T19:47:37.209785+00:00",
+      "alpaca_order_id": "4ffa5a1f-57f1-4c70-9bb8-25ec936d4ba1",
+      "client_order_id": "8fddc41e-7506-4984-8790-9e742b64df5c",
+      "symbol": "JPM",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "38",
       "filled_qty": "0",
       "filled_avg_price": null,
       "limit_price": null,
       "status": "new",
-      "submitted_at": "2026-11-18T19:32:30.801657Z",
+      "submitted_at": "2026-11-18T19:47:37.167647Z",
       "filled_at": null
     }
   ]
