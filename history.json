@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T06:45:17.840019-08:00",
+  "generated_at": "2026-11-18T07:00:27.708329-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "equity_series": [
@@ -572,6 +572,12 @@
       "equity": "97208.96",
       "cash": "-21.49",
       "day_pnl": "-907.48"
+    },
+    {
+      "t": "2026-11-18T07:00:27.703259-08:00",
+      "equity": "97762.1",
+      "cash": "13653.98",
+      "day_pnl": "-354.34"
     }
   ],
   "daily": [
@@ -605,10 +611,10 @@
     },
     {
       "date": "2026-11-18",
-      "equity": "97208.96",
-      "cash": "-21.49",
-      "day_pnl": "-907.48",
-      "snapshot_at": "2026-11-18T06:45:17.835131-08:00"
+      "equity": "97762.1",
+      "cash": "13653.98",
+      "day_pnl": "-354.34",
+      "snapshot_at": "2026-11-18T07:00:27.703259-08:00"
     }
   ],
   "trades": [
@@ -725,11 +731,26 @@
       "side": "sell",
       "order_type": "market",
       "qty": "73",
+      "filled_qty": "73",
+      "filled_avg_price": "187.335205",
+      "limit_price": null,
+      "status": "filled",
+      "submitted_at": "2026-11-18T14:45:23.259640Z",
+      "filled_at": "2026-11-18T14:45:25.019582Z"
+    },
+    {
+      "logged_at": "2026-11-18T15:00:27.395537+00:00",
+      "alpaca_order_id": "7cd13aa1-9cca-4d76-90d0-bed3dec5748b",
+      "client_order_id": "3c79f914-87ee-46d5-b5d3-487b5c47215e",
+      "symbol": "UNH",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "35",
       "filled_qty": "0",
       "filled_avg_price": null,
       "limit_price": null,
       "status": "pending_new",
-      "submitted_at": "2026-11-18T14:45:17.495074Z",
+      "submitted_at": "2026-11-18T15:00:27.347969Z",
       "filled_at": null
     }
   ]
