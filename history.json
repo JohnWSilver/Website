@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T07:15:25.696884-08:00",
+  "generated_at": "2026-11-19T07:30:31.610730-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "equity_series": [
@@ -746,6 +746,12 @@
       "equity": "96622.34",
       "cash": "15477.42",
       "day_pnl": "860.11"
+    },
+    {
+      "t": "2026-11-19T07:30:31.606752-08:00",
+      "equity": "95985.87",
+      "cash": "484.48",
+      "day_pnl": "223.64"
     }
   ],
   "daily": [
@@ -786,10 +792,10 @@
     },
     {
       "date": "2026-11-19",
-      "equity": "96622.34",
-      "cash": "15477.42",
-      "day_pnl": "860.11",
-      "snapshot_at": "2026-11-19T07:15:25.691601-08:00"
+      "equity": "95985.87",
+      "cash": "484.48",
+      "day_pnl": "223.64",
+      "snapshot_at": "2026-11-19T07:30:31.606752-08:00"
     }
   ],
   "trades": [
@@ -981,12 +987,12 @@
       "side": "buy",
       "order_type": "market",
       "qty": "427",
-      "filled_qty": "0",
-      "filled_avg_price": null,
+      "filled_qty": "427",
+      "filled_avg_price": "35.112272",
       "limit_price": null,
-      "status": "pending_new",
-      "submitted_at": "2026-11-19T15:15:25.209960Z",
-      "filled_at": null
+      "status": "filled",
+      "submitted_at": "2026-11-19T15:15:26.912031Z",
+      "filled_at": "2026-11-19T15:15:30.454411Z"
     }
   ]
 }
