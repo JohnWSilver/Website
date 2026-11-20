@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T07:00:21.883274-08:00",
+  "generated_at": "2026-11-20T07:15:28.691842-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "equity_series": [
@@ -902,6 +902,12 @@
       "equity": "94450.95",
       "cash": "23618.96",
       "day_pnl": "338.83"
+    },
+    {
+      "t": "2026-11-20T07:15:28.686555-08:00",
+      "equity": "94284.92",
+      "cash": "423.23",
+      "day_pnl": "172.80"
     }
   ],
   "daily": [
@@ -949,10 +955,10 @@
     },
     {
       "date": "2026-11-20",
-      "equity": "94450.95",
-      "cash": "23618.96",
-      "day_pnl": "338.83",
-      "snapshot_at": "2026-11-20T07:00:21.877225-08:00"
+      "equity": "94284.92",
+      "cash": "423.23",
+      "day_pnl": "172.80",
+      "snapshot_at": "2026-11-20T07:15:28.686555-08:00"
     }
   ],
   "trades": [
@@ -1182,21 +1188,6 @@
       "filled_at": "2026-11-20T14:45:25.370401Z"
     },
     {
-      "logged_at": "2026-11-20T15:00:21.452777+00:00",
-      "alpaca_order_id": "d3595b56-be2f-47df-acfa-07e462ced2a6",
-      "client_order_id": "ca5dd471-c52e-44ec-aeff-0f9bd2b6ea39",
-      "symbol": "CRM",
-      "side": "buy",
-      "order_type": "market",
-      "qty": "80",
-      "filled_qty": "0",
-      "filled_avg_price": null,
-      "limit_price": null,
-      "status": "pending_new",
-      "submitted_at": "2026-11-20T15:00:21.375841Z",
-      "filled_at": null
-    },
-    {
       "logged_at": "2026-11-20T15:00:21.550032+00:00",
       "alpaca_order_id": "9534ccfe-5baf-436a-b083-90068f6425ad",
       "client_order_id": "48253abb-e151-4d89-b7b2-ef83d3e90231",
@@ -1204,12 +1195,27 @@
       "side": "buy",
       "order_type": "market",
       "qty": "25",
-      "filled_qty": "0",
-      "filled_avg_price": null,
+      "filled_qty": "25",
+      "filled_avg_price": "327.1",
       "limit_price": null,
-      "status": "pending_new",
-      "submitted_at": "2026-11-20T15:00:21.503345Z",
-      "filled_at": null
+      "status": "filled",
+      "submitted_at": "2026-11-20T15:00:27.432876Z",
+      "filled_at": "2026-11-20T15:00:28.736107Z"
+    },
+    {
+      "logged_at": "2026-11-20T15:00:21.452777+00:00",
+      "alpaca_order_id": "d3595b56-be2f-47df-acfa-07e462ced2a6",
+      "client_order_id": "ca5dd471-c52e-44ec-aeff-0f9bd2b6ea39",
+      "symbol": "CRM",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "80",
+      "filled_qty": "80",
+      "filled_avg_price": "187.727875",
+      "limit_price": null,
+      "status": "filled",
+      "submitted_at": "2026-11-20T15:00:27.325250Z",
+      "filled_at": "2026-11-20T15:00:31.779882Z"
     }
   ]
 }
