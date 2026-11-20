@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T06:45:14.134131-08:00",
+  "generated_at": "2026-11-20T07:00:21.883274-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "equity_series": [
@@ -896,6 +896,12 @@
       "equity": "94042.55",
       "cash": "484.15",
       "day_pnl": "-69.57"
+    },
+    {
+      "t": "2026-11-20T07:00:21.877225-08:00",
+      "equity": "94450.95",
+      "cash": "23618.96",
+      "day_pnl": "338.83"
     }
   ],
   "daily": [
@@ -943,10 +949,10 @@
     },
     {
       "date": "2026-11-20",
-      "equity": "94042.55",
-      "cash": "484.15",
-      "day_pnl": "-69.57",
-      "snapshot_at": "2026-11-20T06:45:14.130304-08:00"
+      "equity": "94450.95",
+      "cash": "23618.96",
+      "day_pnl": "338.83",
+      "snapshot_at": "2026-11-20T07:00:21.877225-08:00"
     }
   ],
   "trades": [
@@ -1146,21 +1152,6 @@
       "filled_at": "2026-11-19T15:15:30.454411Z"
     },
     {
-      "logged_at": "2026-11-20T14:45:13.653895+00:00",
-      "alpaca_order_id": "17e88da7-7303-45b1-a0c4-094b85dd0ca4",
-      "client_order_id": "334a52f6-b428-4908-994b-413475ae7ba6",
-      "symbol": "NVDA",
-      "side": "sell",
-      "order_type": "market",
-      "qty": "67",
-      "filled_qty": "0",
-      "filled_avg_price": null,
-      "limit_price": null,
-      "status": "pending_new",
-      "submitted_at": "2026-11-20T14:45:13.609258Z",
-      "filled_at": null
-    },
-    {
       "logged_at": "2026-11-20T14:45:13.745224+00:00",
       "alpaca_order_id": "23aaeb60-4e18-4bf7-af48-eafddc98f683",
       "client_order_id": "6af46fbf-9578-48e7-b48f-3689cebe7d75",
@@ -1168,11 +1159,56 @@
       "side": "sell",
       "order_type": "market",
       "qty": "26",
+      "filled_qty": "26",
+      "filled_avg_price": "529.192308",
+      "limit_price": null,
+      "status": "filled",
+      "submitted_at": "2026-11-20T14:45:17.783111Z",
+      "filled_at": "2026-11-20T14:45:24.110342Z"
+    },
+    {
+      "logged_at": "2026-11-20T14:45:13.653895+00:00",
+      "alpaca_order_id": "17e88da7-7303-45b1-a0c4-094b85dd0ca4",
+      "client_order_id": "334a52f6-b428-4908-994b-413475ae7ba6",
+      "symbol": "NVDA",
+      "side": "sell",
+      "order_type": "market",
+      "qty": "67",
+      "filled_qty": "67",
+      "filled_avg_price": "139.937463",
+      "limit_price": null,
+      "status": "filled",
+      "submitted_at": "2026-11-20T14:45:17.668679Z",
+      "filled_at": "2026-11-20T14:45:25.370401Z"
+    },
+    {
+      "logged_at": "2026-11-20T15:00:21.452777+00:00",
+      "alpaca_order_id": "d3595b56-be2f-47df-acfa-07e462ced2a6",
+      "client_order_id": "ca5dd471-c52e-44ec-aeff-0f9bd2b6ea39",
+      "symbol": "CRM",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "80",
       "filled_qty": "0",
       "filled_avg_price": null,
       "limit_price": null,
       "status": "pending_new",
-      "submitted_at": "2026-11-20T14:45:13.702287Z",
+      "submitted_at": "2026-11-20T15:00:21.375841Z",
+      "filled_at": null
+    },
+    {
+      "logged_at": "2026-11-20T15:00:21.550032+00:00",
+      "alpaca_order_id": "9534ccfe-5baf-436a-b083-90068f6425ad",
+      "client_order_id": "48253abb-e151-4d89-b7b2-ef83d3e90231",
+      "symbol": "AMAT",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "25",
+      "filled_qty": "0",
+      "filled_avg_price": null,
+      "limit_price": null,
+      "status": "pending_new",
+      "submitted_at": "2026-11-20T15:00:21.503345Z",
       "filled_at": null
     }
   ]

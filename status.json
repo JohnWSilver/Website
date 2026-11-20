@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T06:45:14.137369-08:00",
+  "generated_at": "2026-11-20T07:00:21.886611-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "market_open": true,
@@ -7,11 +7,11 @@
   "next_close": "2026-11-20T13:00:00-08:00",
   "account": {
     "status": "ACTIVE",
-    "equity": "94042.55",
-    "cash": "484.15",
-    "buying_power": "263900.11",
+    "equity": "94450.95",
+    "cash": "23618.96",
+    "buying_power": "269609.09",
     "last_equity": "94112.12",
-    "day_pnl": "-69.56999999999243"
+    "day_pnl": "338.83000000000175"
   },
   "open_positions": [
     {
@@ -19,87 +19,93 @@
       "qty": "90",
       "side": "long",
       "avg_entry_price": "166.698333",
-      "current_price": "163.2",
-      "market_value": "14688",
-      "unrealized_pl": "-314.84997",
-      "unrealized_plpc": "-0.02099",
+      "current_price": "164.33",
+      "market_value": "14789.7",
+      "unrealized_pl": "-213.14997",
+      "unrealized_plpc": "-0.01421",
       "cost_basis": "15002.84997",
-      "change_today": "0.01676"
-    },
-    {
-      "symbol": "CAT",
-      "qty": "26",
-      "side": "long",
-      "avg_entry_price": "574.36",
-      "current_price": "529.095",
-      "market_value": "13756.47",
-      "unrealized_pl": "-1176.89",
-      "unrealized_plpc": "-0.07881",
-      "cost_basis": "14933.36",
-      "change_today": "-0.0154"
+      "change_today": "0.0238"
     },
     {
       "symbol": "IBM",
       "qty": "63",
       "side": "long",
       "avg_entry_price": "238.08",
-      "current_price": "227.915",
-      "market_value": "14358.645",
-      "unrealized_pl": "-640.395",
-      "unrealized_plpc": "-0.0427",
+      "current_price": "231.51",
+      "market_value": "14585.13",
+      "unrealized_pl": "-413.91",
+      "unrealized_plpc": "-0.0276",
       "cost_basis": "14999.04",
-      "change_today": "0.01802"
+      "change_today": "0.03408"
     },
     {
       "symbol": "JPM",
       "qty": "38",
       "side": "long",
       "avg_entry_price": "324.8",
-      "current_price": "319.28",
-      "market_value": "12132.64",
-      "unrealized_pl": "-209.76",
-      "unrealized_plpc": "-0.017",
+      "current_price": "320.65",
+      "market_value": "12184.7",
+      "unrealized_pl": "-157.7",
+      "unrealized_plpc": "-0.01278",
       "cost_basis": "12342.4",
-      "change_today": "-0.00294"
+      "change_today": "0.00134"
     },
     {
       "symbol": "NFLX",
       "qty": "248",
       "side": "long",
       "avg_entry_price": "60.450161",
-      "current_price": "58.985",
-      "market_value": "14628.28",
-      "unrealized_pl": "-363.359928",
-      "unrealized_plpc": "-0.02424",
+      "current_price": "59.115",
+      "market_value": "14660.52",
+      "unrealized_pl": "-331.119928",
+      "unrealized_plpc": "-0.02209",
       "cost_basis": "14991.639928",
-      "change_today": "0.00898"
+      "change_today": "0.0112"
     },
     {
       "symbol": "NKE",
       "qty": "427",
       "side": "long",
       "avg_entry_price": "35.112272",
-      "current_price": "34.29",
-      "market_value": "14641.83",
-      "unrealized_pl": "-351.110144",
-      "unrealized_plpc": "-0.02342",
+      "current_price": "34.22",
+      "market_value": "14611.94",
+      "unrealized_pl": "-381.000144",
+      "unrealized_plpc": "-0.02541",
       "cost_basis": "14992.940144",
-      "change_today": "-0.00117"
-    },
-    {
-      "symbol": "NVDA",
-      "qty": "67",
-      "side": "long",
-      "avg_entry_price": "156.001791",
-      "current_price": "139.51",
-      "market_value": "9347.17",
-      "unrealized_pl": "-1104.949997",
-      "unrealized_plpc": "-0.10572",
-      "cost_basis": "10452.119997",
-      "change_today": "-0.04432"
+      "change_today": "-0.0032"
     }
   ],
   "last_trades": [
+    {
+      "logged_at": "2026-11-20T15:00:21.550032+00:00",
+      "alpaca_order_id": "9534ccfe-5baf-436a-b083-90068f6425ad",
+      "client_order_id": "48253abb-e151-4d89-b7b2-ef83d3e90231",
+      "symbol": "AMAT",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "25",
+      "filled_qty": "0",
+      "filled_avg_price": null,
+      "limit_price": null,
+      "status": "pending_new",
+      "submitted_at": "2026-11-20T15:00:21.503345Z",
+      "filled_at": null
+    },
+    {
+      "logged_at": "2026-11-20T15:00:21.452777+00:00",
+      "alpaca_order_id": "d3595b56-be2f-47df-acfa-07e462ced2a6",
+      "client_order_id": "ca5dd471-c52e-44ec-aeff-0f9bd2b6ea39",
+      "symbol": "CRM",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "80",
+      "filled_qty": "0",
+      "filled_avg_price": null,
+      "limit_price": null,
+      "status": "pending_new",
+      "submitted_at": "2026-11-20T15:00:21.375841Z",
+      "filled_at": null
+    },
     {
       "logged_at": "2026-11-20T14:45:13.745224+00:00",
       "alpaca_order_id": "23aaeb60-4e18-4bf7-af48-eafddc98f683",
@@ -108,12 +114,12 @@
       "side": "sell",
       "order_type": "market",
       "qty": "26",
-      "filled_qty": "0",
-      "filled_avg_price": null,
+      "filled_qty": "26",
+      "filled_avg_price": "529.192308",
       "limit_price": null,
-      "status": "pending_new",
-      "submitted_at": "2026-11-20T14:45:13.702287Z",
-      "filled_at": null
+      "status": "filled",
+      "submitted_at": "2026-11-20T14:45:17.783111Z",
+      "filled_at": "2026-11-20T14:45:24.110342Z"
     },
     {
       "logged_at": "2026-11-20T14:45:13.653895+00:00",
@@ -123,12 +129,12 @@
       "side": "sell",
       "order_type": "market",
       "qty": "67",
-      "filled_qty": "0",
-      "filled_avg_price": null,
+      "filled_qty": "67",
+      "filled_avg_price": "139.937463",
       "limit_price": null,
-      "status": "pending_new",
-      "submitted_at": "2026-11-20T14:45:13.609258Z",
-      "filled_at": null
+      "status": "filled",
+      "submitted_at": "2026-11-20T14:45:17.668679Z",
+      "filled_at": "2026-11-20T14:45:25.370401Z"
     },
     {
       "logged_at": "2026-11-19T15:15:25.256617+00:00",
