@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T06:30:06.897764-08:00",
+  "generated_at": "2026-11-20T06:45:14.134131-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "equity_series": [
@@ -890,6 +890,12 @@
       "equity": "93579.81",
       "cash": "484.15",
       "day_pnl": "-532.31"
+    },
+    {
+      "t": "2026-11-20T06:45:14.130304-08:00",
+      "equity": "94042.55",
+      "cash": "484.15",
+      "day_pnl": "-69.57"
     }
   ],
   "daily": [
@@ -937,10 +943,10 @@
     },
     {
       "date": "2026-11-20",
-      "equity": "93579.81",
+      "equity": "94042.55",
       "cash": "484.15",
-      "day_pnl": "-532.31",
-      "snapshot_at": "2026-11-20T06:30:06.891790-08:00"
+      "day_pnl": "-69.57",
+      "snapshot_at": "2026-11-20T06:45:14.130304-08:00"
     }
   ],
   "trades": [
@@ -1138,6 +1144,36 @@
       "status": "filled",
       "submitted_at": "2026-11-19T15:15:26.912031Z",
       "filled_at": "2026-11-19T15:15:30.454411Z"
+    },
+    {
+      "logged_at": "2026-11-20T14:45:13.653895+00:00",
+      "alpaca_order_id": "17e88da7-7303-45b1-a0c4-094b85dd0ca4",
+      "client_order_id": "334a52f6-b428-4908-994b-413475ae7ba6",
+      "symbol": "NVDA",
+      "side": "sell",
+      "order_type": "market",
+      "qty": "67",
+      "filled_qty": "0",
+      "filled_avg_price": null,
+      "limit_price": null,
+      "status": "pending_new",
+      "submitted_at": "2026-11-20T14:45:13.609258Z",
+      "filled_at": null
+    },
+    {
+      "logged_at": "2026-11-20T14:45:13.745224+00:00",
+      "alpaca_order_id": "23aaeb60-4e18-4bf7-af48-eafddc98f683",
+      "client_order_id": "6af46fbf-9578-48e7-b48f-3689cebe7d75",
+      "symbol": "CAT",
+      "side": "sell",
+      "order_type": "market",
+      "qty": "26",
+      "filled_qty": "0",
+      "filled_avg_price": null,
+      "limit_price": null,
+      "status": "pending_new",
+      "submitted_at": "2026-11-20T14:45:13.702287Z",
+      "filled_at": null
     }
   ]
 }
