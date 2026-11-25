@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T09:46:53.553494-08:00",
+  "generated_at": "2026-11-25T10:02:06.004214-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "equity_series": [
@@ -1466,6 +1466,12 @@
       "equity": "95948.08",
       "cash": "150.92",
       "day_pnl": "488.57"
+    },
+    {
+      "t": "2026-11-25T10:02:05.998820-08:00",
+      "equity": "96151.47",
+      "cash": "15462.98",
+      "day_pnl": "691.96"
     }
   ],
   "daily": [
@@ -1541,10 +1547,10 @@
     },
     {
       "date": "2026-11-25",
-      "equity": "95948.08",
-      "cash": "150.92",
-      "day_pnl": "488.57",
-      "snapshot_at": "2026-11-25T09:46:53.548416-08:00"
+      "equity": "96151.47",
+      "cash": "15462.98",
+      "day_pnl": "691.96",
+      "snapshot_at": "2026-11-25T10:02:05.998820-08:00"
     }
   ],
   "trades": [
@@ -1841,11 +1847,26 @@
       "side": "sell",
       "order_type": "market",
       "qty": "63",
+      "filled_qty": "63",
+      "filled_avg_price": "243.048571",
+      "limit_price": null,
+      "status": "filled",
+      "submitted_at": "2026-11-25T17:46:53.251191Z",
+      "filled_at": "2026-11-25T17:46:54.886949Z"
+    },
+    {
+      "logged_at": "2026-11-25T18:02:05.692852+00:00",
+      "alpaca_order_id": "1b52f783-3ac4-42e9-b72b-ce0d1337f2f0",
+      "client_order_id": "87923e8e-b9bf-4435-b22a-97f58ad77358",
+      "symbol": "C",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "132",
       "filled_qty": "0",
       "filled_avg_price": null,
       "limit_price": null,
       "status": "new",
-      "submitted_at": "2026-11-25T17:46:53.251190Z",
+      "submitted_at": "2026-11-25T18:02:05.653942Z",
       "filled_at": null
     }
   ]

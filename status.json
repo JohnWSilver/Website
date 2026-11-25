@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T09:46:53.557684-08:00",
+  "generated_at": "2026-11-25T10:02:06.007910-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "market_open": true,
@@ -7,11 +7,11 @@
   "next_close": "2026-11-25T13:00:00-08:00",
   "account": {
     "status": "ACTIVE",
-    "equity": "95948.08",
-    "cash": "150.92",
-    "buying_power": "268835.72",
+    "equity": "96151.47",
+    "cash": "15462.98",
+    "buying_power": "272867.65",
     "last_equity": "95459.51",
-    "day_pnl": "488.570000000007"
+    "day_pnl": "691.9600000000064"
   },
   "open_positions": [
     {
@@ -19,87 +19,90 @@
       "qty": "90",
       "side": "long",
       "avg_entry_price": "166.698333",
-      "current_price": "164.56",
-      "market_value": "14810.4",
-      "unrealized_pl": "-192.44997",
-      "unrealized_plpc": "-0.01283",
+      "current_price": "164.8831",
+      "market_value": "14839.479",
+      "unrealized_pl": "-163.37097",
+      "unrealized_plpc": "-0.01089",
       "cost_basis": "15002.84997",
-      "change_today": "0.00593"
+      "change_today": "0.0079"
     },
     {
       "symbol": "CRM",
       "qty": "80",
       "side": "long",
       "avg_entry_price": "187.727875",
-      "current_price": "197.47",
-      "market_value": "15797.6",
-      "unrealized_pl": "779.37",
-      "unrealized_plpc": "0.05189",
+      "current_price": "197.31",
+      "market_value": "15784.8",
+      "unrealized_pl": "766.57",
+      "unrealized_plpc": "0.05104",
       "cost_basis": "15018.23",
-      "change_today": "0.02178"
-    },
-    {
-      "symbol": "IBM",
-      "qty": "63",
-      "side": "long",
-      "avg_entry_price": "238.08",
-      "current_price": "243.15",
-      "market_value": "15318.45",
-      "unrealized_pl": "319.41",
-      "unrealized_plpc": "0.0213",
-      "cost_basis": "14999.04",
-      "change_today": "0.03196"
+      "change_today": "0.02096"
     },
     {
       "symbol": "JPM",
       "qty": "38",
       "side": "long",
       "avg_entry_price": "324.8",
-      "current_price": "315.555",
-      "market_value": "11991.09",
-      "unrealized_pl": "-351.31",
-      "unrealized_plpc": "-0.02846",
+      "current_price": "316.15",
+      "market_value": "12013.7",
+      "unrealized_pl": "-328.7",
+      "unrealized_plpc": "-0.02663",
       "cost_basis": "12342.4",
-      "change_today": "-0.00487"
+      "change_today": "-0.003"
     },
     {
       "symbol": "MS",
       "qty": "47",
       "side": "long",
       "avg_entry_price": "163.151489",
-      "current_price": "165.86",
-      "market_value": "7795.42",
-      "unrealized_pl": "127.300017",
-      "unrealized_plpc": "0.0166",
+      "current_price": "166.37",
+      "market_value": "7819.39",
+      "unrealized_pl": "151.270017",
+      "unrealized_plpc": "0.01973",
       "cost_basis": "7668.119983",
-      "change_today": "-0.01736"
+      "change_today": "-0.01434"
     },
     {
       "symbol": "NFLX",
       "qty": "248",
       "side": "long",
       "avg_entry_price": "60.450161",
-      "current_price": "58.72",
-      "market_value": "14562.56",
-      "unrealized_pl": "-429.079928",
-      "unrealized_plpc": "-0.02862",
+      "current_price": "58.815",
+      "market_value": "14586.12",
+      "unrealized_pl": "-405.519928",
+      "unrealized_plpc": "-0.02705",
       "cost_basis": "14991.639928",
-      "change_today": "-0.00255"
+      "change_today": "-0.00093"
     },
     {
       "symbol": "NKE",
       "qty": "427",
       "side": "long",
       "avg_entry_price": "35.112272",
-      "current_price": "36.375",
-      "market_value": "15532.125",
-      "unrealized_pl": "539.184856",
-      "unrealized_plpc": "0.03596",
+      "current_price": "36.63",
+      "market_value": "15641.01",
+      "unrealized_pl": "648.069856",
+      "unrealized_plpc": "0.04323",
       "cost_basis": "14992.940144",
-      "change_today": "0.01748"
+      "change_today": "0.02462"
     }
   ],
   "last_trades": [
+    {
+      "logged_at": "2026-11-25T18:02:05.692852+00:00",
+      "alpaca_order_id": "1b52f783-3ac4-42e9-b72b-ce0d1337f2f0",
+      "client_order_id": "87923e8e-b9bf-4435-b22a-97f58ad77358",
+      "symbol": "C",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "132",
+      "filled_qty": "0",
+      "filled_avg_price": null,
+      "limit_price": null,
+      "status": "new",
+      "submitted_at": "2026-11-25T18:02:05.653942Z",
+      "filled_at": null
+    },
     {
       "logged_at": "2026-11-25T17:46:53.264993+00:00",
       "alpaca_order_id": "c80ce9d0-d83e-4a25-9ef3-ba2d000c90b8",
@@ -108,12 +111,12 @@
       "side": "sell",
       "order_type": "market",
       "qty": "63",
-      "filled_qty": "0",
-      "filled_avg_price": null,
+      "filled_qty": "63",
+      "filled_avg_price": "243.048571",
       "limit_price": null,
-      "status": "new",
-      "submitted_at": "2026-11-25T17:46:53.251190Z",
-      "filled_at": null
+      "status": "filled",
+      "submitted_at": "2026-11-25T17:46:53.251191Z",
+      "filled_at": "2026-11-25T17:46:54.886949Z"
     },
     {
       "logged_at": "2026-11-25T15:30:51.404057+00:00",
@@ -384,25 +387,39 @@
       "status": "filled",
       "submitted_at": "2026-11-17T14:30:15.637556Z",
       "filled_at": "2026-11-17T14:31:55.172729Z"
-    },
-    {
-      "logged_at": "2026-11-17T14:30:05.439714+00:00",
-      "alpaca_order_id": "522f95bd-32fe-489f-a17b-91cd6daa3a85",
-      "client_order_id": "7293a79e-df54-46d0-bba4-1207b8cc66a8",
-      "symbol": "BA",
-      "side": "buy",
-      "order_type": "market",
-      "qty": "90",
-      "filled_qty": "90",
-      "filled_avg_price": "166.698333",
-      "limit_price": null,
-      "status": "filled",
-      "submitted_at": "2026-11-17T14:30:14.512988Z",
-      "filled_at": "2026-11-17T14:33:19.241364Z"
     }
   ],
   "research_enabled": true,
   "research": [
+    {
+      "researched_at": "2026-11-25T10:02:05.589660-08:00",
+      "symbol": "C",
+      "decision": "BUY",
+      "confidence": 0.85,
+      "allowed": true,
+      "reason": "The dip appears driven by broad market weakness (inflation/tariffs) rather than company-specific fundamental deterioration, as recent Citi news is neutral or operational.",
+      "source": "llm",
+      "headline_count": 12,
+      "model": "local",
+      "error": null,
+      "headlines": [
+        {
+          "title": "Starbucks Reportedly Engages Citigroup for Potential Japan Business Sale",
+          "url": "https://www.moomoo.com/stock/C-US?chain_id=Name1K9-3FXPhg.1lg70g0&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A107%2C%22f%22%3A%22www.moomoo.com%2Fetfs%2FVGT-US%22%7D",
+          "source": "fiscal.ai"
+        },
+        {
+          "title": "Citigroup's UK Chief Risk Officer Steps Down",
+          "url": "https://www.moomoo.com/stock/C-US?chain_id=Name1K9-3FXPhg.1lg70g0&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A107%2C%22f%22%3A%22www.moomoo.com%2Fetfs%2FVGT-US%22%7D",
+          "source": "fiscal.ai"
+        },
+        {
+          "title": "Citigroup Considers Return to Banking Services in Venezuela",
+          "url": "https://www.finanzen.ch/nachrichten/aktien/citi-reportedly-considers-return-to-venezuela-five-years-after-exit-1036798894",
+          "source": "fiscal.ai"
+        }
+      ]
+    },
     {
       "researched_at": "2026-11-25T07:30:51.304609-08:00",
       "symbol": "MS",
