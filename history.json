@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T06:30:06.353610-08:00",
+  "generated_at": "2026-11-25T06:45:12.807398-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "equity_series": [
@@ -1388,6 +1388,12 @@
       "equity": "93721.67",
       "cash": "422.74",
       "day_pnl": "-1737.84"
+    },
+    {
+      "t": "2026-11-25T06:45:12.801800-08:00",
+      "equity": "93118.77",
+      "cash": "422.74",
+      "day_pnl": "-2340.74"
     }
   ],
   "daily": [
@@ -1463,10 +1469,10 @@
     },
     {
       "date": "2026-11-25",
-      "equity": "93721.67",
+      "equity": "93118.77",
       "cash": "422.74",
-      "day_pnl": "-1737.84",
-      "snapshot_at": "2026-11-25T06:30:06.346355-08:00"
+      "day_pnl": "-2340.74",
+      "snapshot_at": "2026-11-25T06:45:12.801800-08:00"
     }
   ],
   "trades": [
@@ -1724,6 +1730,21 @@
       "status": "filled",
       "submitted_at": "2026-11-20T15:00:27.325250Z",
       "filled_at": "2026-11-20T15:00:31.779882Z"
+    },
+    {
+      "logged_at": "2026-11-25T14:45:12.513412+00:00",
+      "alpaca_order_id": "c076ee0e-f7b1-4810-b6a5-976251dd707c",
+      "client_order_id": "372cb459-18f3-4670-9a35-57fa23a57ba4",
+      "symbol": "AMAT",
+      "side": "sell",
+      "order_type": "market",
+      "qty": "25",
+      "filled_qty": "0",
+      "filled_avg_price": null,
+      "limit_price": null,
+      "status": "pending_new",
+      "submitted_at": "2026-11-25T14:45:12.469532Z",
+      "filled_at": null
     }
   ]
 }
