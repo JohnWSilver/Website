@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T06:45:12.811755-08:00",
+  "generated_at": "2026-11-25T07:00:26.693029-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "market_open": true,
@@ -7,96 +7,84 @@
   "next_close": "2026-11-25T13:00:00-08:00",
   "account": {
     "status": "ACTIVE",
-    "equity": "93118.77",
-    "cash": "422.74",
-    "buying_power": "261239.83",
+    "equity": "94241.26",
+    "cash": "7819.04",
+    "buying_power": "273258.38",
     "last_equity": "95459.51",
-    "day_pnl": "-2340.7399999999907"
+    "day_pnl": "-1218.25"
   },
   "open_positions": [
-    {
-      "symbol": "AMAT",
-      "qty": "25",
-      "side": "long",
-      "avg_entry_price": "327.1",
-      "current_price": "295.19",
-      "market_value": "7379.75",
-      "unrealized_pl": "-797.75",
-      "unrealized_plpc": "-0.09755",
-      "cost_basis": "8177.5",
-      "change_today": "-0.08824"
-    },
     {
       "symbol": "BA",
       "qty": "90",
       "side": "long",
       "avg_entry_price": "166.698333",
-      "current_price": "159.64",
-      "market_value": "14367.6",
-      "unrealized_pl": "-635.24997",
-      "unrealized_plpc": "-0.04234",
+      "current_price": "161.92",
+      "market_value": "14572.8",
+      "unrealized_pl": "-430.04997",
+      "unrealized_plpc": "-0.02866",
       "cost_basis": "15002.84997",
-      "change_today": "-0.02415"
+      "change_today": "-0.01021"
     },
     {
       "symbol": "CRM",
       "qty": "80",
       "side": "long",
       "avg_entry_price": "187.727875",
-      "current_price": "188.795",
-      "market_value": "15103.6",
-      "unrealized_pl": "85.37",
-      "unrealized_plpc": "0.00568",
+      "current_price": "193.3484",
+      "market_value": "15467.872",
+      "unrealized_pl": "449.642",
+      "unrealized_plpc": "0.02994",
       "cost_basis": "15018.23",
-      "change_today": "-0.0231"
+      "change_today": "0.00046"
     },
     {
       "symbol": "IBM",
       "qty": "63",
       "side": "long",
       "avg_entry_price": "238.08",
-      "current_price": "232.83",
-      "market_value": "14668.29",
-      "unrealized_pl": "-330.75",
-      "unrealized_plpc": "-0.02205",
+      "current_price": "237.32",
+      "market_value": "14951.16",
+      "unrealized_pl": "-47.88",
+      "unrealized_plpc": "-0.00319",
       "cost_basis": "14999.04",
-      "change_today": "-0.01184"
+      "change_today": "0.00722"
     },
     {
       "symbol": "JPM",
       "qty": "38",
       "side": "long",
       "avg_entry_price": "324.8",
-      "current_price": "310.5",
-      "market_value": "11799",
-      "unrealized_pl": "-543.4",
-      "unrealized_plpc": "-0.04403",
+      "current_price": "312.35",
+      "market_value": "11869.3",
+      "unrealized_pl": "-473.1",
+      "unrealized_plpc": "-0.03833",
       "cost_basis": "12342.4",
-      "change_today": "-0.02081"
+      "change_today": "-0.01498"
     },
     {
       "symbol": "NFLX",
       "qty": "248",
       "side": "long",
       "avg_entry_price": "60.450161",
-      "current_price": "57.31",
-      "market_value": "14212.88",
-      "unrealized_pl": "-778.759928",
-      "unrealized_plpc": "-0.05195",
+      "current_price": "57.91",
+      "market_value": "14361.68",
+      "unrealized_pl": "-629.959928",
+      "unrealized_plpc": "-0.04202",
       "cost_basis": "14991.639928",
-      "change_today": "-0.0265"
+      "change_today": "-0.01631"
     },
     {
       "symbol": "NKE",
       "qty": "427",
       "side": "long",
       "avg_entry_price": "35.112272",
-      "current_price": "35.515",
-      "market_value": "15164.905",
-      "unrealized_pl": "171.964856",
-      "unrealized_plpc": "0.01147",
+      "current_price": "35.59",
+      "market_value": "15196.93",
+      "unrealized_pl": "203.989856",
+      "unrealized_plpc": "0.01361",
       "cost_basis": "14992.940144",
-      "change_today": "-0.00657"
+      "change_today": "-0.00448"
     }
   ],
   "last_trades": [
@@ -108,12 +96,12 @@
       "side": "sell",
       "order_type": "market",
       "qty": "25",
-      "filled_qty": "0",
-      "filled_avg_price": null,
+      "filled_qty": "25",
+      "filled_avg_price": "295.852",
       "limit_price": null,
-      "status": "pending_new",
-      "submitted_at": "2026-11-25T14:45:12.469532Z",
-      "filled_at": null
+      "status": "filled",
+      "submitted_at": "2026-11-25T14:45:21.218090Z",
+      "filled_at": "2026-11-25T14:45:24.350965Z"
     },
     {
       "logged_at": "2026-11-20T15:00:21.550032+00:00",
@@ -372,5 +360,35 @@
     }
   ],
   "research_enabled": true,
-  "research": []
+  "research": [
+    {
+      "researched_at": "2026-11-25T07:00:26.259641-08:00",
+      "symbol": "SPCX",
+      "decision": "SKIP",
+      "confidence": 0.85,
+      "allowed": false,
+      "reason": "Recent news indicates significant regulatory and legal risks, including lawsuits from Virginia and Oregon over AI-generated content and warnings of a potential drop below $100 due to merger speculation.",
+      "source": "llm",
+      "headline_count": 9,
+      "model": "local",
+      "error": null,
+      "headlines": [
+        {
+          "title": "Duquesne Family Office Discloses New SpaceX Stake",
+          "url": "https://www.moomoo.com/stock/SPCX-US?chain_id=Name1K9-3FXPhg.1lg8s8g&global_content=%7B%22promote_id%22%3A13764%2C%22sub_promote_id%22%3A57%2C%22f%22%3A%22www.moomoo.com%2Fstock%2FAMZN-CA%22%7D",
+          "source": "fiscal.ai"
+        },
+        {
+          "title": "Elon Musk Comments on SpaceX's AI Development Progress",
+          "url": "https://www.fidelity.com/news/article/company-news/202611231142MIDNIGHTUSEQUITY_A3759266",
+          "source": "fiscal.ai"
+        },
+        {
+          "title": "SpaceX Sued by Virginia and Oregon Over AI-Generated Content",
+          "url": "https://www.marketscreener.com/news/spacex-sued-by-virginia-oregon-over-grok-s-creation-of-child-sexual-abuse-images-non-consensual-ma-ce7851dada8bf62c",
+          "source": "fiscal.ai"
+        }
+      ]
+    }
+  ]
 }
