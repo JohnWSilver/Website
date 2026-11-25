@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T07:15:38.667787-08:00",
+  "generated_at": "2026-11-25T07:30:51.712756-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "market_open": true,
@@ -7,11 +7,11 @@
   "next_close": "2026-11-25T13:00:00-08:00",
   "account": {
     "status": "ACTIVE",
-    "equity": "94314.93",
+    "equity": "94058.04",
     "cash": "7819.04",
-    "buying_power": "273464.65",
+    "buying_power": "265074",
     "last_equity": "95459.51",
-    "day_pnl": "-1144.5800000000017"
+    "day_pnl": "-1401.4700000000012"
   },
   "open_positions": [
     {
@@ -19,75 +19,90 @@
       "qty": "90",
       "side": "long",
       "avg_entry_price": "166.698333",
-      "current_price": "161.265",
-      "market_value": "14513.85",
-      "unrealized_pl": "-488.99997",
-      "unrealized_plpc": "-0.03259",
+      "current_price": "161.33",
+      "market_value": "14519.7",
+      "unrealized_pl": "-483.14997",
+      "unrealized_plpc": "-0.0322",
       "cost_basis": "15002.84997",
-      "change_today": "-0.01421"
+      "change_today": "-0.01382"
     },
     {
       "symbol": "CRM",
       "qty": "80",
       "side": "long",
       "avg_entry_price": "187.727875",
-      "current_price": "194.66",
-      "market_value": "15572.8",
-      "unrealized_pl": "554.57",
-      "unrealized_plpc": "0.03693",
+      "current_price": "192.48",
+      "market_value": "15398.4",
+      "unrealized_pl": "380.17",
+      "unrealized_plpc": "0.02531",
       "cost_basis": "15018.23",
-      "change_today": "0.00724"
+      "change_today": "-0.00404"
     },
     {
       "symbol": "IBM",
       "qty": "63",
       "side": "long",
       "avg_entry_price": "238.08",
-      "current_price": "238.405",
-      "market_value": "15019.515",
-      "unrealized_pl": "20.475",
-      "unrealized_plpc": "0.00137",
+      "current_price": "238.42",
+      "market_value": "15020.46",
+      "unrealized_pl": "21.42",
+      "unrealized_plpc": "0.00143",
       "cost_basis": "14999.04",
-      "change_today": "0.01182"
+      "change_today": "0.01188"
     },
     {
       "symbol": "JPM",
       "qty": "38",
       "side": "long",
       "avg_entry_price": "324.8",
-      "current_price": "311.575",
-      "market_value": "11839.85",
-      "unrealized_pl": "-502.55",
-      "unrealized_plpc": "-0.04072",
+      "current_price": "311.035",
+      "market_value": "11819.33",
+      "unrealized_pl": "-523.07",
+      "unrealized_plpc": "-0.04238",
       "cost_basis": "12342.4",
-      "change_today": "-0.01742"
+      "change_today": "-0.01913"
     },
     {
       "symbol": "NFLX",
       "qty": "248",
       "side": "long",
       "avg_entry_price": "60.450161",
-      "current_price": "58.09",
-      "market_value": "14406.32",
-      "unrealized_pl": "-585.319928",
-      "unrealized_plpc": "-0.03904",
+      "current_price": "57.52",
+      "market_value": "14264.96",
+      "unrealized_pl": "-726.679928",
+      "unrealized_plpc": "-0.04847",
       "cost_basis": "14991.639928",
-      "change_today": "-0.01325"
+      "change_today": "-0.02293"
     },
     {
       "symbol": "NKE",
       "qty": "427",
       "side": "long",
       "avg_entry_price": "35.112272",
-      "current_price": "35.465",
-      "market_value": "15143.555",
-      "unrealized_pl": "150.614856",
-      "unrealized_plpc": "0.01005",
+      "current_price": "35.635",
+      "market_value": "15216.145",
+      "unrealized_pl": "223.204856",
+      "unrealized_plpc": "0.01489",
       "cost_basis": "14992.940144",
-      "change_today": "-0.00797"
+      "change_today": "-0.00322"
     }
   ],
   "last_trades": [
+    {
+      "logged_at": "2026-11-25T15:30:51.404057+00:00",
+      "alpaca_order_id": "4207b4a7-8f2e-4deb-9cbe-d4146fe8c682",
+      "client_order_id": "6e81bfbf-cf2a-4639-ab90-7f8fc5c85a43",
+      "symbol": "MS",
+      "side": "buy",
+      "order_type": "market",
+      "qty": "47",
+      "filled_qty": "0",
+      "filled_avg_price": null,
+      "limit_price": null,
+      "status": "new",
+      "submitted_at": "2026-11-25T15:30:51.364905Z",
+      "filled_at": null
+    },
     {
       "logged_at": "2026-11-25T14:45:12.513412+00:00",
       "alpaca_order_id": "c076ee0e-f7b1-4810-b6a5-976251dd707c",
@@ -361,6 +376,35 @@
   ],
   "research_enabled": true,
   "research": [
+    {
+      "researched_at": "2026-11-25T07:30:51.304609-08:00",
+      "symbol": "MS",
+      "decision": "BUY",
+      "confidence": 0.85,
+      "allowed": true,
+      "reason": "Recent news shows no fundamental deterioration for Morgan Stanley itself; the dip appears driven by broader market volatility and AI sector routs rather than company-specific issues.",
+      "source": "llm",
+      "headline_count": 16,
+      "model": "local",
+      "error": null,
+      "headlines": [
+        {
+          "title": "Morgan Stanley Adjusts Price Target on Workday",
+          "url": "https://www.marketscreener.com/news/morgan-stanley-adjusts-price-target-on-workday-to-175-from-180-ce7851d8d980f323",
+          "source": "fiscal.ai"
+        },
+        {
+          "title": "Morgan Stanley Appointed as Adviser for Potential Sale of Starbucks Japan Business",
+          "url": "https://www.marketscreener.com/news/starbucks-working-with-citigroup-morgan-stanley-on-potential-japan-business-sale-ce7851dbd180f621",
+          "source": "fiscal.ai"
+        },
+        {
+          "title": "Morgan Stanley Adjusts Price Target for Zoom Communications",
+          "url": "https://www.marketscreener.com/news/morgan-stanley-raises-zoom-communications-price-target-to-108-from-107-maintains-equal-weight-rat-ce7851dbdd8bf526",
+          "source": "fiscal.ai"
+        }
+      ]
+    },
     {
       "researched_at": "2026-11-25T07:15:38.367840-08:00",
       "symbol": "UNH",
