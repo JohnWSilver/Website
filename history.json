@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T09:31:47.279508-08:00",
+  "generated_at": "2026-11-25T09:46:53.553494-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "equity_series": [
@@ -1460,6 +1460,12 @@
       "equity": "95565.48",
       "cash": "150.92",
       "day_pnl": "105.97"
+    },
+    {
+      "t": "2026-11-25T09:46:53.548416-08:00",
+      "equity": "95948.08",
+      "cash": "150.92",
+      "day_pnl": "488.57"
     }
   ],
   "daily": [
@@ -1535,10 +1541,10 @@
     },
     {
       "date": "2026-11-25",
-      "equity": "95565.48",
+      "equity": "95948.08",
       "cash": "150.92",
-      "day_pnl": "105.97",
-      "snapshot_at": "2026-11-25T09:31:47.273812-08:00"
+      "day_pnl": "488.57",
+      "snapshot_at": "2026-11-25T09:46:53.548416-08:00"
     }
   ],
   "trades": [
@@ -1826,6 +1832,21 @@
       "status": "filled",
       "submitted_at": "2026-11-25T15:30:51.364905Z",
       "filled_at": "2026-11-25T15:30:54.862640Z"
+    },
+    {
+      "logged_at": "2026-11-25T17:46:53.264993+00:00",
+      "alpaca_order_id": "c80ce9d0-d83e-4a25-9ef3-ba2d000c90b8",
+      "client_order_id": "8a71652a-9ae1-4b3d-a3ab-35f282b7e008",
+      "symbol": "IBM",
+      "side": "sell",
+      "order_type": "market",
+      "qty": "63",
+      "filled_qty": "0",
+      "filled_avg_price": null,
+      "limit_price": null,
+      "status": "new",
+      "submitted_at": "2026-11-25T17:46:53.251190Z",
+      "filled_at": null
     }
   ]
 }
