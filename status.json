@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T08:15:51.279678-08:00",
+  "generated_at": "2026-11-27T08:30:57.949181-08:00",
   "timezone": "America/Los_Angeles",
   "paper": true,
   "market_open": true,
@@ -7,11 +7,11 @@
   "next_close": "2026-11-27T10:00:00-08:00",
   "account": {
     "status": "ACTIVE",
-    "equity": "97875.45",
+    "equity": "98004.84",
     "cash": "550.46",
-    "buying_power": "274711.8",
+    "buying_power": "275074.1",
     "last_equity": "96392.99",
-    "day_pnl": "1482.4599999999919"
+    "day_pnl": "1611.8499999999913"
   },
   "open_positions": [
     {
@@ -19,84 +19,84 @@
       "qty": "90",
       "side": "long",
       "avg_entry_price": "166.698333",
-      "current_price": "166.37",
-      "market_value": "14973.3",
-      "unrealized_pl": "-29.54997",
-      "unrealized_plpc": "-0.00197",
+      "current_price": "167.165",
+      "market_value": "15044.85",
+      "unrealized_pl": "42.00003",
+      "unrealized_plpc": "0.0028",
       "cost_basis": "15002.84997",
-      "change_today": "0.01118"
+      "change_today": "0.01602"
     },
     {
       "symbol": "C",
       "qty": "132",
       "side": "long",
       "avg_entry_price": "112.97",
-      "current_price": "115.61",
-      "market_value": "15260.52",
-      "unrealized_pl": "348.48",
-      "unrealized_plpc": "0.02337",
+      "current_price": "115.74",
+      "market_value": "15277.68",
+      "unrealized_pl": "365.64",
+      "unrealized_plpc": "0.02452",
       "cost_basis": "14912.04",
-      "change_today": "0.02012"
+      "change_today": "0.02127"
     },
     {
       "symbol": "CRM",
       "qty": "80",
       "side": "long",
       "avg_entry_price": "187.727875",
-      "current_price": "197.115",
-      "market_value": "15769.2",
-      "unrealized_pl": "750.97",
-      "unrealized_plpc": "0.05",
+      "current_price": "197.66",
+      "market_value": "15812.8",
+      "unrealized_pl": "794.57",
+      "unrealized_plpc": "0.05291",
       "cost_basis": "15018.23",
-      "change_today": "-0.00048"
+      "change_today": "0.00228"
     },
     {
       "symbol": "JPM",
       "qty": "38",
       "side": "long",
       "avg_entry_price": "324.8",
-      "current_price": "323.565",
-      "market_value": "12295.47",
-      "unrealized_pl": "-46.93",
-      "unrealized_plpc": "-0.0038",
+      "current_price": "323.83",
+      "market_value": "12305.54",
+      "unrealized_pl": "-36.86",
+      "unrealized_plpc": "-0.00299",
       "cost_basis": "12342.4",
-      "change_today": "0.02155"
+      "change_today": "0.02238"
     },
     {
       "symbol": "MS",
       "qty": "47",
       "side": "long",
       "avg_entry_price": "163.151489",
-      "current_price": "171.275",
-      "market_value": "8049.925",
-      "unrealized_pl": "381.805017",
-      "unrealized_plpc": "0.04979",
+      "current_price": "171.595",
+      "market_value": "8064.965",
+      "unrealized_pl": "396.845017",
+      "unrealized_plpc": "0.05175",
       "cost_basis": "7668.119983",
-      "change_today": "0.02223"
+      "change_today": "0.02414"
     },
     {
       "symbol": "NFLX",
       "qty": "248",
       "side": "long",
       "avg_entry_price": "60.450161",
-      "current_price": "60.735",
-      "market_value": "15062.28",
-      "unrealized_pl": "70.640072",
-      "unrealized_plpc": "0.00471",
+      "current_price": "60.82",
+      "market_value": "15083.36",
+      "unrealized_pl": "91.720072",
+      "unrealized_plpc": "0.00612",
       "cost_basis": "14991.639928",
-      "change_today": "0.0223"
+      "change_today": "0.02373"
     },
     {
       "symbol": "NKE",
       "qty": "427",
       "side": "long",
       "avg_entry_price": "35.112272",
-      "current_price": "37.27",
-      "market_value": "15914.29",
-      "unrealized_pl": "921.349856",
-      "unrealized_plpc": "0.06145",
+      "current_price": "37.155",
+      "market_value": "15865.185",
+      "unrealized_pl": "872.244856",
+      "unrealized_plpc": "0.05818",
       "cost_basis": "14992.940144",
-      "change_today": "0.01664"
+      "change_today": "0.0135"
     }
   ],
   "last_trades": [
